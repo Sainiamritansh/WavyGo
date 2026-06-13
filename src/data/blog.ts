@@ -1,0 +1,48 @@
+import { BlogPost } from "@/types";
+
+export const BLOG_POSTS: BlogPost[] = [
+  {
+    id: 1,
+    title: "Dehradun to Mussoorie: The Perfect Weekend Ride Guide",
+    excerpt: "35 km of winding hill roads, misty forests, and that first view of the Doon Valley as you descend. Here's everything a first-timer needs to know before twisting the throttle.",
+    author: "Arjun Negi",
+    readTime: "8 min read",
+    category: "Route Guide",
+    date: "Jun 5, 2026",
+    img: "https://images.unsplash.com/photo-1703439409619-41dcf45a5e15?w=800&h=500&fit=crop&auto=format",
+    featured: true,
+  },
+  {
+    id: 2,
+    title: "Chakrata on a Shoestring: Student Budget Road Trip",
+    excerpt: "98 km from Dehradun, zero tourists, Tiger Falls, and pine forests that smell like cold wind. Two students, two scooters, ₹1,200 total.",
+    author: "Sneha Rawat",
+    readTime: "6 min read",
+    category: "Budget Travel",
+    date: "Jun 2, 2026",
+    img: "https://images.unsplash.com/photo-1652891251448-3f60d6ef5c98?w=600&h=400&fit=crop&auto=format",
+    featured: false,
+  },
+  {
+    id: 3,
+    title: "Why Rishikesh is India's Best Motorcycle Destination",
+    excerpt: "River crossings, ashram roads, a sunset at the Triveni Ghat, and the highway north toward Badrinath. Rishikesh is more than yoga — it's pure riding magic.",
+    author: "Kabir Thakur",
+    readTime: "5 min read",
+    category: "Destination Story",
+    date: "May 28, 2026",
+    img: "https://images.unsplash.com/photo-1575925368237-5c5689ec4cf3?w=600&h=400&fit=crop&auto=format",
+    featured: false,
+  },
+  {
+    id: 4,
+    title: "Monsoon Riding in Uttarakhand: What No One Tells You",
+    excerpt: "Rain, landslides, slippery mountain roads, and the most breathtaking landscapes you'll ever see. A survival guide for those who ride when others don't.",
+    author: "Divya Mehta",
+    readTime: "7 min read",
+    category: "Riding Tips",
+    date: "May 20, 2026",
+    img: "https://images.unsplash.com/photo-1777581702282-6e41c33e5118?w=600&h=400&fit=crop&auto=format",
+    featured: false,
+  },
+];

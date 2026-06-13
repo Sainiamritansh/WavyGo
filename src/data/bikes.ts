@@ -1,0 +1,58 @@
+import { BikeCategory } from "@/types";
+
+export const BIKE_CATEGORIES: BikeCategory[] = [
+  {
+    id: "scooter",
+    name: "Scooter",
+    desc: "City rides & quick errands",
+    price: "₹299",
+    img: "https://images.unsplash.com/photo-1780504863256-bdbb13bddfbc?w=500&h=320&fit=crop&auto=format",
+    tag: "Most Popular",
+    color: "#e8f5ee",
+  },
+  {
+    id: "commuter",
+    name: "Commuter",
+    desc: "Daily commutes & short trips",
+    price: "₹399",
+    img: "https://images.unsplash.com/photo-1663407978077-ca116e36abf0?w=500&h=320&fit=crop&auto=format",
+    tag: "Best Value",
+    color: "#fef9ee",
+  },
+  {
+    id: "adventure",
+    name: "Adventure",
+    desc: "Mountain roads & off-road trails",
+    price: "₹799",
+    img: "https://images.unsplash.com/photo-1699972551272-e0eaee1916b2?w=500&h=320&fit=crop&auto=format",
+    tag: "Top Rated",
+    color: "#e8f5ee",
+  },
+  {
+    id: "cruiser",
+    name: "Cruiser",
+    desc: "Long highway touring",
+    price: "₹999",
+    img: "https://images.unsplash.com/photo-1550149550-33b46c745e03?w=500&h=320&fit=crop&auto=format",
+    tag: "Premium",
+    color: "#fef9ee",
+  },
+  {
+    id: "sports",
+    name: "Sports",
+    desc: "High-performance riding",
+    price: "₹1,299",
+    img: "https://images.unsplash.com/photo-1610202926204-c0c9b7d8f112?w=500&h=320&fit=crop&auto=format",
+    tag: "Thrill Seekers",
+    color: "#e8f5ee",
+  },
+  {
+    id: "ebike",
+    name: "E-Bike",
+    desc: "Eco-friendly urban mobility",
+    price: "₹249",
+    img: "https://images.unsplash.com/photo-1648204732508-bae5945d2e5a?w=500&h=320&fit=crop&auto=format",
+    tag: "Eco Choice",
+    color: "#edf7f0",
+  },
+];
