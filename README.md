@@ -62,9 +62,6 @@ The codebase was initially exported from **Figma Make** (Figma's design-to-code 
 ---
 
 ## Screenshots
-
-> Replace these placeholders with actual screenshots once added to the repository.
-
 | Section | Preview |
 |---|---|
 | Hero + Booking Form | ![Hero](/assets/home-page.png) |
