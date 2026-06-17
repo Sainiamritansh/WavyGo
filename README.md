@@ -67,7 +67,7 @@ The codebase was initially exported from **Figma Make** (Figma's design-to-code 
 
 | Section | Preview |
 |---|---|
-| Hero + Booking Form | ![Hero](https://placehold.co/900x500/1a3b2e/ffffff?text=Hero+%E2%80%94+Your+Next+Adventure+Starts+Here) |
+| Hero + Booking Form | ![Hero](/Wavygo/assets/home-page.png) |
 | Browse by Bike Type | ![Browse](https://placehold.co/900x500/f5f5f0/1a3b2e?text=Browse+by+Type+%E2%80%94+Scooter+%2F+Commuter+%2F+Adventure) |
 | Destination Discovery | ![Destinations](https://placehold.co/900x500/f0f5f0/1a3b2e?text=Discover+Nearby+Destinations) |
 | App Showcase | ![App](https://placehold.co/900x500/1a3b2e/e8a12d?text=The+WavyGo+App+%E2%80%94+Every+Ride+in+Your+Pocket) |
