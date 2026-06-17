@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🏍️ WavyGo
+#  WavyGo
 
 **India's Bike & Scooter Rental Marketplace — Frontend Web Application**
 
