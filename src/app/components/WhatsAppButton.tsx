@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { X, MessageCircle } from "lucide-react";
-import { WHATSAPP_PHONE, WHATSAPP_MESSAGE } from "@/data";
+import { WHATSAPP_PHONE, WHATSAPP_MESSAGE } from "../../data";
 
 export function WhatsAppButton() {
   const [open, setOpen] = useState(false);

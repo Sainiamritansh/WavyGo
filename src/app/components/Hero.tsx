@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { MapPin, Calendar, Search, Star, Shield, Zap, ChevronRight } from "lucide-react";
-import { LOCATIONS, HERO_TRUST_CARDS } from "@/data";
+import { LOCATIONS, HERO_TRUST_CARDS } from "../../data";
 
 export function Hero() {
   const [location, setLocation] = useState("");

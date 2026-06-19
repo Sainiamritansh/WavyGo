@@ -1,4 +1,4 @@
-import { STATS } from "@/data";
+import { STATS } from "../../data";
 
 export function StatsStrip() {
   return (

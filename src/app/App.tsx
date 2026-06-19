@@ -1,3 +1,9 @@
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
+import { BlogDetails } from "./components/BlogDetails";
 import { useEffect, useRef, useState } from "react";
 import { Header } from "./components/Header";
 import { Hero } from "./components/Hero";
@@ -15,6 +21,8 @@ import { FAQ } from "./components/FAQ";
 import { Blog } from "./components/Blog";
 import { Footer } from "./components/Footer";
 import { WhatsAppButton } from "./components/WhatsAppButton";
+import { RouteDetails } from "./components/RouteDetails";
+import CategoryPage from "./components/categorypage";
 
 function ScrollReveal({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
   const ref = useRef<HTMLDivElement>(null);
@@ -52,23 +60,53 @@ function ScrollReveal({ children, delay = 0 }: { children: React.ReactNode; dela
 
 export default function App() {
   return (
-    <div className="min-h-screen" style={{ fontFamily: "'Inter', sans-serif" }}>
-      <Header />
-      <Hero />
-      <StatsStrip />
-      <BrandMarquee />
-      <ScrollReveal><BikeCategories /></ScrollReveal>
-      <ScrollReveal><HowItWorks /></ScrollReveal>
-      <ScrollReveal><DestinationDiscovery /></ScrollReveal>
-      <ScrollReveal><ExploreIndia /></ScrollReveal>
-      <AppShowcase />
-      <ScrollReveal><AppDownload /></ScrollReveal>
-      <ScrollReveal><HostSection /></ScrollReveal>
-      <ScrollReveal><Testimonials /></ScrollReveal>
-      <ScrollReveal><FAQ /></ScrollReveal>
-      <ScrollReveal><Blog /></ScrollReveal>
-      <Footer />
-      <WhatsAppButton />
-    </div>
+    <BrowserRouter>
+      <Routes>
+
+        <Route
+          path="/"
+          element={
+            <div
+              className="min-h-screen"
+              style={{
+                fontFamily: "'Inter', sans-serif",
+              }}
+            >
+              <Header />
+              <Hero />
+              <StatsStrip />
+              <BrandMarquee />
+              <ScrollReveal><BikeCategories /></ScrollReveal>
+              <ScrollReveal><HowItWorks /></ScrollReveal>
+              <ScrollReveal><DestinationDiscovery /></ScrollReveal>
+              <ScrollReveal><ExploreIndia /></ScrollReveal>
+              <AppShowcase />
+              <ScrollReveal><AppDownload /></ScrollReveal>
+              <ScrollReveal><HostSection /></ScrollReveal>
+              <ScrollReveal><Testimonials /></ScrollReveal>
+              <ScrollReveal><FAQ /></ScrollReveal>
+              <ScrollReveal><Blog /></ScrollReveal>
+              <Footer />
+              <WhatsAppButton />
+            </div>
+          }
+        />
+
+        <Route
+          path="/blog/:id"
+          element={<BlogDetails />}
+        />
+        <Route
+          path="/route/:id"
+          element={<RouteDetails />}
+        />
+        <Route
+          path="/bikes/:category"
+          element={<CategoryPage />}
+        />
+      
+
+      </Routes>
+    </BrowserRouter>
   );
 }

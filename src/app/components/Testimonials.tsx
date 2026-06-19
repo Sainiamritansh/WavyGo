@@ -1,6 +1,6 @@
 import { Star, Quote, ArrowLeft, ArrowRight } from "lucide-react";
 import { useCarousel } from "@/utils/hooks";
-import { TESTIMONIALS } from "@/data";
+import { TESTIMONIALS } from "../../data";
 
 const CARD_W = 360;
 const GAP = 20;

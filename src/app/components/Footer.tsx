@@ -1,5 +1,5 @@
 import { MapPin, Mail, Phone, Instagram, Twitter, Facebook, Youtube } from "lucide-react";
-import { FOOTER_LINKS, FOOTER_CONTACT } from "@/data";
+import { FOOTER_LINKS, FOOTER_CONTACT } from "../../data";
 
 export function Footer() {
   return (

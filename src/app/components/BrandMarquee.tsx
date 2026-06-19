@@ -1,4 +1,4 @@
-import { BRANDS } from "@/data";
+import { BRANDS } from "../../data";
 
 export function BrandMarquee() {
   return (

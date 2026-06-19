@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { MapPin, Clock, Bike, ChevronRight, Navigation, ArrowLeft, ArrowRight } from "lucide-react";
 import { useCarousel } from "@/utils/hooks";
-import { DESTINATIONS, DIFFICULTY_COLORS } from "@/data";
+import { DESTINATIONS, DIFFICULTY_COLORS } from "../../data";
 
 const CARD_W = 320;
 const GAP = 20;
