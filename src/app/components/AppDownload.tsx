@@ -1,5 +1,6 @@
 import { CheckCircle, MapPin, Bell, Shield, Star } from "lucide-react";
 import { APP_DOWNLOAD_FEATURES } from "@/data";
+import { PLAY_STORE_URL } from "@/constants/links";
 
 export function AppDownload() {
   return (
@@ -111,7 +112,7 @@ export function AppDownload() {
                 </div>
               </a>
               <a
-                href="https://play.google.com"
+                href={PLAY_STORE_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 bg-white/10 text-white border border-white/20 px-5 py-3 rounded-2xl hover:bg-white/20 transition-colors"

@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { Routes, Route } from "react-router-dom";
 import { Header } from "./components/Header";
 import { Hero } from "./components/Hero";
 import { StatsStrip } from "./components/StatsStrip";
@@ -15,6 +16,7 @@ import { FAQ } from "./components/FAQ";
 import { Blog } from "./components/Blog";
 import { Footer } from "./components/Footer";
 import { WhatsAppButton } from "./components/WhatsAppButton";
+import AuthPage from "./components/Login";
 
 function ScrollReveal({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
   const ref = useRef<HTMLDivElement>(null);
@@ -50,7 +52,7 @@ function ScrollReveal({ children, delay = 0 }: { children: React.ReactNode; dela
   );
 }
 
-export default function App() {
+function HomePage() {
   return (
     <div className="min-h-screen" style={{ fontFamily: "'Inter', sans-serif" }}>
       <Header />
@@ -70,5 +72,14 @@ export default function App() {
       <Footer />
       <WhatsAppButton />
     </div>
+  );
+}
+
+export default function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/login" element={<AuthPage />} />
+    </Routes>
   );
 }

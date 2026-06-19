@@ -1,5 +1,6 @@
 import { MapPin, Mail, Phone, Instagram, Twitter, Facebook, Youtube } from "lucide-react";
 import { FOOTER_LINKS, FOOTER_CONTACT } from "@/data";
+import { PLAY_STORE_URL, DEALER_APP_URL, openInNewTab } from "@/constants/links";
 
 export function Footer() {
   return (
@@ -69,13 +70,25 @@ export function Footer() {
               <ul className="flex flex-col gap-2.5">
                 {links.map((link) => (
                   <li key={link}>
-                    <a
-                      href="#"
-                      className="text-gray-400 text-sm hover:text-white transition-colors"
-                      style={{ fontFamily: "'Inter', sans-serif" }}
-                    >
-                      {link}
-                    </a>
+                    {link === "WavyGo Dealer Application" ? (
+                      <a
+                        href={DEALER_APP_URL}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-gray-400 text-sm hover:text-white transition-colors"
+                        style={{ fontFamily: "'Inter', sans-serif" }}
+                      >
+                        {link}
+                      </a>
+                    ) : (
+                      <a
+                        href="#"
+                        className="text-gray-400 text-sm hover:text-white transition-colors"
+                        style={{ fontFamily: "'Inter', sans-serif" }}
+                      >
+                        {link}
+                      </a>
+                    )}
                   </li>
                 ))}
               </ul>
@@ -99,7 +112,7 @@ export function Footer() {
                   <p className="text-white text-xs" style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 700 }}>App Store</p>
                 </div>
               </a>
-              <a href="#" className="flex items-center gap-2 bg-white/10 hover:bg-white/20 transition-colors border border-white/10 px-4 py-2.5 rounded-xl">
+              <a href={PLAY_STORE_URL} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-white/10 hover:bg-white/20 transition-colors border border-white/10 px-4 py-2.5 rounded-xl">
                 <svg viewBox="0 0 24 24" width="18" height="18" fill="white">
                   <path d="M3.18 23.76c.3.17.64.24.99.2l12.12-12.1L13.17 8.8 3.18 23.76zm17.83-12.1l-2.97-1.71-3.41 3.4 3.41 3.41 3-1.74c.86-.5.86-1.85-.03-2.36zm-18.82-9.52l10 10 3.12-3.12L4.2.26C3.85.2 3.48.27 3.18.44c-.89.5-.88 1.9.01 2.4v-.7z"/>
                 </svg>
