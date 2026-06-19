@@ -1,5 +1,5 @@
 import { TrendingUp, CheckCircle, ArrowRight } from "lucide-react";
-import { HOST_STATS, HOST_STEPS } from "@/data";
+import { HOST_STATS, HOST_STEPS } from "../../data";
 
 export function HostSection() {
   return (

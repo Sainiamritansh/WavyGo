@@ -1,5 +1,5 @@
 import { CheckCircle, MapPin, Bell, Shield, Star } from "lucide-react";
-import { APP_DOWNLOAD_FEATURES } from "@/data";
+import { APP_DOWNLOAD_FEATURES } from "../../data";
 
 export function AppDownload() {
   return (

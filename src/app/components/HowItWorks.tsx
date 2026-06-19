@@ -1,4 +1,4 @@
-import { HOW_IT_WORKS_STEPS } from "@/data";
+import { HOW_IT_WORKS_STEPS } from "../../data";
 
 export function HowItWorks() {
   return (

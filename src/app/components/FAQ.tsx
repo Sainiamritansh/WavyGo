@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Plus, Minus } from "lucide-react";
-import { FAQS } from "@/data";
+import { FAQS } from "../../data";
 
 export function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
