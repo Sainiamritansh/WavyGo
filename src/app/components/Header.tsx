@@ -22,7 +22,7 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
         {/* Logo */}
         <a href="#" className="flex items-center">
-          <img src="/logo-bg.png"
+          <img src="/white-logobg.png"
           alt="WavyGo"
           className="h-50 w-50 object-contain"
           />
