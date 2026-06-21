@@ -13,7 +13,7 @@
 
 A production-ready, single-page marketing website for **WavyGo** — a platform connecting riders with self-drive bikes and scooters across Uttarakhand, Himachal Pradesh, and beyond. Originally exported from Figma Make and progressively refactored into a clean, data-driven, type-safe React application.
 
-[📐 View Figma Design](https://www.figma.com/design/f13GAW0wP04Ju0Y2CKsEh6/Wavygo-website) · [📦 Repository](https://github.com/Abhay-Chand/Wavygo)
+[View Figma Design](https://www.figma.com/design/f13GAW0wP04Ju0Y2CKsEh6/Wavygo-website) · [Repository](https://github.com/Abhay-Chand/Wavygo)
 
 </div>
 
