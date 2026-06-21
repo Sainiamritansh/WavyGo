@@ -8,7 +8,7 @@ import { BikeCategories } from "./components/BikeCategories";
 import { HowItWorks } from "./components/HowItWorks";
 import { DestinationDiscovery } from "./components/DestinationDiscovery";
 import { ExploreIndia } from "./components/ExploreIndia";
-import { AppDownload } from "./components/AppDownload";
+
 import { AppShowcase } from "./components/AppShowcase";
 import { HostSection } from "./components/HostSection";
 import { Testimonials } from "./components/Testimonials";
@@ -64,7 +64,7 @@ function HomePage() {
       <ScrollReveal><DestinationDiscovery /></ScrollReveal>
       <ScrollReveal><ExploreIndia /></ScrollReveal>
       <AppShowcase />
-      <ScrollReveal><AppDownload /></ScrollReveal>
+
       <ScrollReveal><HostSection /></ScrollReveal>
       <ScrollReveal><Testimonials /></ScrollReveal>
       <ScrollReveal><FAQ /></ScrollReveal>
