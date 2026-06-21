@@ -25,9 +25,9 @@ export function Header() {
         <a href="#" className="flex items-center gap-2">
           <div className="flex items-center">
             <img
-            src="/white-logobg.png"
+            src={scrolled ? "/logo-bg.png" : "/white-logobg.png"}
             alt="WavyGo"
-            className="h-50 w-50 object-contain"
+            className="h-45 w-60 object-contain transition-all duration-300"
             />
           </div>
         </a>
