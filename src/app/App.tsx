@@ -13,7 +13,6 @@ import { BikeCategories } from "./components/BikeCategories";
 import { HowItWorks } from "./components/HowItWorks";
 import { DestinationDiscovery } from "./components/DestinationDiscovery";
 import { ExploreIndia } from "./components/ExploreIndia";
-import { AppDownload } from "./components/AppDownload";
 import { AppShowcase } from "./components/AppShowcase";
 import { HostSection } from "./components/HostSection";
 import { Testimonials } from "./components/Testimonials";
@@ -23,6 +22,7 @@ import { Footer } from "./components/Footer";
 import { WhatsAppButton } from "./components/WhatsAppButton";
 import { RouteDetails } from "./components/RouteDetails";
 import CategoryPage from "./components/categorypage";
+import AuthPage from "./components/Login";
 
 function ScrollReveal({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
   const ref = useRef<HTMLDivElement>(null);
@@ -81,7 +81,6 @@ export default function App() {
               <ScrollReveal><DestinationDiscovery /></ScrollReveal>
               <ScrollReveal><ExploreIndia /></ScrollReveal>
               <AppShowcase />
-              <ScrollReveal><AppDownload /></ScrollReveal>
               <ScrollReveal><HostSection /></ScrollReveal>
               <ScrollReveal><Testimonials /></ScrollReveal>
               <ScrollReveal><FAQ /></ScrollReveal>
@@ -104,7 +103,10 @@ export default function App() {
           path="/bikes/:category"
           element={<CategoryPage />}
         />
-      
+        <Route
+          path="/login"
+          element={<AuthPage />}
+        />
 
       </Routes>
     </BrowserRouter>

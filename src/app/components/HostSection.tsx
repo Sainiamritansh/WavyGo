@@ -1,5 +1,6 @@
 import { TrendingUp, CheckCircle, ArrowRight } from "lucide-react";
-import { HOST_STATS, HOST_STEPS } from "../../data";
+import { HOST_STATS, HOST_STEPS } from "@/data";
+import { DEALER_APP_URL, openInNewTab } from "@/constants/links";
 
 export function HostSection() {
   return (
@@ -90,6 +91,7 @@ export function HostSection() {
             </div>
 
             <button
+              onClick={() => openInNewTab(DEALER_APP_URL)}
               className="flex items-center gap-2 text-white px-7 py-3.5 rounded-full hover:opacity-90 transition-all"
               style={{ background: "#1a5c38", fontFamily: "'Outfit', sans-serif", fontWeight: 700, fontSize: "1rem" }}
             >
