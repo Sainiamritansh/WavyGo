@@ -4,6 +4,7 @@ import {
   Map, BookOpen, User, Heart, ArrowLeft, Shield,
   Clock, Zap, CheckCircle, Navigation, Filter,
 } from "lucide-react";
+import { PLAY_STORE_URL } from "@/constants/links";
 
 /* ─── Shared phone shell ──────────────────────────────── */
 function PhoneShell({
@@ -536,7 +537,7 @@ export function AppShowcase() {
             </div>
           </a>
           <a
-            href="https://play.google.com"
+            href={PLAY_STORE_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-3 bg-white/10 border border-white/20 text-white px-6 py-3.5 rounded-2xl hover:bg-white/20 transition-colors"

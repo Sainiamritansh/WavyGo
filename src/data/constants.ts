@@ -1,5 +1,5 @@
-import { Stat, Feature, HostStat, HostStep } from "@/types";
-import { Bike, MapPin, Shield, Star, Search, CreditCard, Key, Map, CheckCircle, Bell, TrendingUp } from "lucide-react";
+import { Stat, HostStat, HostStep } from "@/types";
+import { Bike, MapPin, Shield, Star, Search, CreditCard, Key, Map } from "lucide-react";
 
 export const STATS: Stat[] = [
   { icon: Bike, value: "10,000+", label: "Bikes listed across India" },
@@ -70,13 +70,6 @@ export const CATEGORY_TEXT_COLORS: Record<string, string> = {
   "Destination Story": "#2563eb",
   "Riding Tips": "#dc2626",
 };
-
-export const APP_DOWNLOAD_FEATURES: Feature[] = [
-  { icon: MapPin, text: "Real-time bike availability near you" },
-  { icon: Bell, text: "Instant booking confirmation & updates" },
-  { icon: Shield, text: "Secure digital KYC & ride insurance" },
-  { icon: Star, text: "Exclusive app-only deals & discounts" },
-];
 
 export const HOST_STATS: HostStat[] = [
   { value: "₹18,000", label: "Avg. monthly earnings", sub: "per bike" },
