@@ -10,20 +10,15 @@ export function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 mb-14">
           {/* Brand */}
           <div className="col-span-2 md:col-span-3 lg:col-span-1">
-            <div className="flex items-center gap-2 mb-4">
-              <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
-                <path d="M4 22 Q10 8 16 14 Q22 20 28 6" stroke="#4ade80" strokeWidth="3" strokeLinecap="round" fill="none" />
-                <circle cx="28" cy="6" r="3" fill="#f5a623" />
-              </svg>
-              <span
-                className="text-white"
-                style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 800, fontSize: "1.3rem" }}
-              >
-                WavyGo
-              </span>
+            <div className="mb-0">
+              <img
+              src="/white-logobg.png"
+              alt="WavyGo"
+              className="h-50 w-50 object-contain"
+              />
             </div>
-            <p className="text-gray-400 text-sm leading-relaxed mb-5" style={{ fontFamily: "'Inter', sans-serif" }}>
-              India's trusted bike & scooter rental marketplace. Explore destinations, plan road trips, and ride freely.
+            <p className="text-gray-400 text-sm leading-relaxed mb-0" style={{ fontFamily: "'Inter', sans-serif" }}>
+            India's trusted bike & scooter rental marketplace. Explore destinations, plan road trips, and ride freely.
             </p>
 
             <div className="flex flex-col gap-2.5 mb-6">
