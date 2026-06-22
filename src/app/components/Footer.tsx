@@ -9,12 +9,12 @@ export function Footer() {
         {/* Top grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 mb-14">
           {/* Brand */}
-          <div className="col-span-2 md:col-span-3 lg:col-span-1">
+          <div className="col-span-1 md:col-span-3 lg:col-span-1 -mt-10">
             <div className="mb-0">
               <img
-              src="/white-logobg.png"
+              src="/white-logobg-footer.png"
               alt="WavyGo"
-              className="h-50 w-50 object-contain"
+              className="h-35 w-48 object-contain object-left"
               />
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-0" style={{ fontFamily: "'Inter', sans-serif" }}>
