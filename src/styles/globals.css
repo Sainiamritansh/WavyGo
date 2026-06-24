@@ -2,6 +2,17 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Smooth theme transitions (background + text color) */
+body {
+  transition: background-color 250ms ease, color 250ms ease;
+}
+
+/* Block transitions on first paint to prevent FOUC */
+html.no-transition,
+html.no-transition * {
+  transition: none !important;
+}
+
 * {
   box-sizing: border-box;
 }

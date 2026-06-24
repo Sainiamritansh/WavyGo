@@ -18,20 +18,20 @@
     font-family: 'Outfit', sans-serif;
     font-weight: 800;
     font-size: 24px;
-    color: #14301f;
+    color: var(--foreground);
     margin: 0 0 2px;
 }
 
 .otp-verification__subtitle {
     font-size: 13px;
-    color: #5c6b62;
+    color: var(--muted-foreground);
     margin: 0;
 }
 
 .otp-verification__identifier {
     font-size: 14px;
     font-weight: 600;
-    color: #1a5c38;
+    color: var(--primary);
     margin-bottom: 2px;
 }
 
@@ -50,8 +50,8 @@
     font-size: 20px;
     font-weight: 600;
     font-family: 'Inter', sans-serif;
-    color: #14301f;
-    background: #f4f8f5;
+    color: var(--foreground);
+    background: var(--muted);
     border: 2px solid transparent;
     border-radius: 10px;
     padding: 0;
@@ -62,8 +62,8 @@
 
 .otp-verification__box:focus {
     outline: none;
-    border-color: #1a5c38;
-    background: #fff;
+    border-color: var(--primary);
+    background: var(--card);
 }
 
 /* Red flash on incorrect OTP */
@@ -75,7 +75,7 @@
 
 /* Green border on success */
 .otp-verification__box--success {
-    border-color: #1a5c38 !important;
+    border-color: var(--primary) !important;
     background: #f0faf3 !important;
 }
 
@@ -98,7 +98,7 @@
 
 .otp-verification__success {
     font-size: 13px;
-    color: #1a5c38;
+    color: var(--primary);
     font-weight: 600;
     margin: 4px 0;
     padding: 0;
@@ -115,7 +115,7 @@
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background: #1a5c38;
+    background: var(--primary);
     color: #fff;
     font-size: 12px;
     font-weight: 700;
@@ -125,8 +125,8 @@
 /* ── Verify button ── */
 .otp-verification__btn {
     border-radius: 999px;
-    border: 1px solid #1a5c38;
-    background: #1a5c38;
+    border: 1px solid var(--primary);
+    background: var(--primary);
     color: #fff;
     font-family: 'Inter', sans-serif;
     font-size: 13px;
@@ -166,17 +166,17 @@
 
 .otp-verification__resend-text {
     font-size: 13px;
-    color: #5c6b62;
+    color: var(--muted-foreground);
 }
 
 .otp-verification__resend-text strong {
-    color: #1a5c38;
+    color: var(--primary);
 }
 
 .otp-verification__resend-link {
     font-size: 13px;
     font-weight: 500;
-    color: #1a5c38;
+    color: var(--primary);
     text-decoration: none;
     cursor: pointer;
     background: none;
@@ -194,7 +194,7 @@
 .otp-verification__back {
     font-size: 13px;
     font-weight: 500;
-    color: #5c6b62;
+    color: var(--muted-foreground);
     text-decoration: none;
     cursor: pointer;
     margin-top: 4px;
@@ -205,5 +205,5 @@
 }
 
 .otp-verification__back:hover {
-    color: #1a5c38;
+    color: var(--primary);
 }

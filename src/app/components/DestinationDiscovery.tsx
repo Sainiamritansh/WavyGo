@@ -16,7 +16,7 @@ export function DestinationDiscovery() {
   const renderCard = (dest: (typeof DESTINATIONS)[number], idx: number) => (
     <div
       key={`${dest.id}-${idx}`}
-      className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 cursor-pointer group hover:-translate-y-0.5"
+      className="bg-card rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 cursor-pointer group hover:-translate-y-0.5"
       style={{
         width: CARD_W,
         flexShrink: 0,
@@ -40,7 +40,7 @@ export function DestinationDiscovery() {
         )}
         <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm rounded-full px-2.5 py-1 flex items-center gap-1">
           <span className="w-2 h-2 rounded-full" style={{ background: DIFFICULTY_COLORS[dest.difficulty] }} />
-          <span className="text-xs text-gray-700" style={{ fontFamily: "'Inter', sans-serif", fontWeight: 500 }}>{dest.difficulty}</span>
+          <span className="text-xs text-foreground" style={{ fontFamily: "'Inter', sans-serif", fontWeight: 500 }}>{dest.difficulty}</span>
         </div>
         <div className="absolute bottom-3 left-3">
           <p className="text-white text-xs opacity-75" style={{ fontFamily: "'Inter', sans-serif" }}>{dest.tagline}</p>
@@ -50,24 +50,24 @@ export function DestinationDiscovery() {
 
       {/* Info — unchanged */}
       <div className="p-4">
-        <p className="text-gray-500 text-xs mb-3" style={{ fontFamily: "'Inter', sans-serif" }}>{dest.highlight}</p>
+        <p className="text-muted-foreground text-xs mb-3" style={{ fontFamily: "'Inter', sans-serif" }}>{dest.highlight}</p>
         <div className="flex items-center gap-4 mb-4">
-          <div className="flex items-center gap-1.5 text-xs text-gray-600" style={{ fontFamily: "'Inter', sans-serif" }}>
-            <MapPin size={12} className="text-[#1a5c38]" />
+          <div className="flex items-center gap-1.5 text-xs text-muted-foreground" style={{ fontFamily: "'Inter', sans-serif" }}>
+            <MapPin size={12} className="text-primary" />
             {dest.distance}
           </div>
-          <div className="flex items-center gap-1.5 text-xs text-gray-600" style={{ fontFamily: "'Inter', sans-serif" }}>
-            <Clock size={12} className="text-[#1a5c38]" />
+          <div className="flex items-center gap-1.5 text-xs text-muted-foreground" style={{ fontFamily: "'Inter', sans-serif" }}>
+            <Clock size={12} className="text-primary" />
             {dest.rideTime}
           </div>
-          <div className="flex items-center gap-1.5 text-xs text-gray-600" style={{ fontFamily: "'Inter', sans-serif" }}>
-            <Bike size={12} className="text-[#1a5c38]" />
+          <div className="flex items-center gap-1.5 text-xs text-muted-foreground" style={{ fontFamily: "'Inter', sans-serif" }}>
+            <Bike size={12} className="text-primary" />
             {dest.bikes.length} bike types
           </div>
         </div>
         <div className="flex items-center gap-2 mb-4">
           {dest.bikes.map((b) => (
-            <span key={b} className="bg-[#e8f5ee] text-[#1a5c38] px-2.5 py-1 rounded-full text-xs" style={{ fontFamily: "'Inter', sans-serif", fontWeight: 500 }}>
+            <span key={b} className="bg-secondary text-secondary-foreground px-2.5 py-1 rounded-full text-xs" style={{ fontFamily: "'Inter', sans-serif", fontWeight: 500 }}>
               {b}
             </span>
           ))}
@@ -91,7 +91,7 @@ export function DestinationDiscovery() {
   );
 
   return (
-    <section id="destinations" className="py-20 bg-[#f7faf8]">
+    <section id="destinations" className="py-20 bg-background">
       <div className="max-w-7xl mx-auto">
 
         {/* ── Header ─────────────────────────────────────────── */}
@@ -107,20 +107,20 @@ export function DestinationDiscovery() {
               </p>
             </div>
             <h2
-              className="text-[#111827]"
+              className="text-foreground"
               style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 800, fontSize: "clamp(1.8rem, 3.5vw, 2.6rem)" }}
             >
               Discover Nearby Destinations
             </h2>
-            <p className="text-gray-500 mt-2 max-w-xl" style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.95rem" }}>
+            <p className="text-muted-foreground mt-2 max-w-xl" style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.95rem" }}>
               Pick where you want to ride, and we'll show you the best bikes for that route.
             </p>
           </div>
 
           <div className="flex items-center gap-3 flex-shrink-0">
-            <div className="flex items-center gap-2 bg-white border border-gray-200 rounded-full px-4 py-2.5">
-              <MapPin size={14} className="text-[#1a5c38]" />
-              <span className="text-sm text-gray-600" style={{ fontFamily: "'Inter', sans-serif" }}>Dehradun, Uttarakhand</span>
+            <div className="flex items-center gap-2 bg-card border border-border rounded-full px-4 py-2.5">
+              <MapPin size={14} className="text-primary" />
+              <span className="text-sm text-muted-foreground" style={{ fontFamily: "'Inter', sans-serif" }}>Dehradun, Uttarakhand</span>
               <span className="w-1.5 h-1.5 rounded-full bg-green-400 ml-1" />
             </div>
           </div>

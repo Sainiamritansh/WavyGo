@@ -2,9 +2,9 @@ import { BRANDS } from "../../data";
 
 export function BrandMarquee() {
   return (
-    <div className="py-5 bg-white border-b border-gray-100 overflow-hidden">
+    <div className="py-5 bg-card border-b border-border overflow-hidden">
       <p
-        className="text-center text-gray-400 text-xs uppercase tracking-widest mb-4"
+        className="text-center text-muted-foreground text-xs uppercase tracking-widest mb-4"
         style={{ fontFamily: "'Inter', sans-serif", fontWeight: 600 }}
       >
         Bikes from India's top manufacturers
@@ -20,7 +20,7 @@ export function BrandMarquee() {
           {BRANDS.map((brand, i) => (
             <span
               key={`${brand}-${i}`}
-              className="text-gray-300 hover:text-[#1a5c38] transition-colors cursor-pointer"
+              className="text-muted-foreground/50 hover:text-primary transition-colors cursor-pointer"
               style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 800, fontSize: "1rem", letterSpacing: "0.02em" }}
             >
               {brand}

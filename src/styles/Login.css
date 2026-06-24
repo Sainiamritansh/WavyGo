@@ -34,7 +34,7 @@
 .auth-page h1 {
     font-family: 'Outfit', sans-serif;
     font-weight: 800;
-    color: #14301f;
+    color: var(--foreground);
     margin: 0;
 }
 
@@ -53,11 +53,11 @@
 
 .auth-page span {
     font-size: 13px;
-    color: #5c6b62;
+    color: var(--muted-foreground);
 }
 
 .auth-page a {
-    color: #1a5c38;
+    color: var(--primary);
     font-size: 14px;
     font-weight: 500;
     text-decoration: none;
@@ -65,7 +65,7 @@
 }
 
 .container {
-    background: #fff;
+    background: var(--card);
     border-radius: 24px;
     box-shadow: 0 14px 28px rgba(15, 61, 33, .18), 0 10px 10px rgba(15, 61, 33, .1);
     position: relative;
@@ -76,7 +76,7 @@
 }
 
 .form-container form {
-    background: #fff;
+    background: var(--card);
     display: flex;
     flex-direction: column;
     padding: 0 0px;
@@ -91,7 +91,7 @@
 }
 
 .social-container a {
-    border: 1px solid #cfe0d6;
+    border: 1px solid var(--border);
     border-radius: 50%;
     display: inline-flex;
     justify-content: center;
@@ -99,38 +99,38 @@
     margin: 0 5px;
     height: 40px;
     width: 40px;
-    color: #1a5c38;
+    color: var(--primary);
     transition: all 150ms ease;
 }
 
 .social-container a:hover {
-    background: #1a5c38;
+    background: var(--primary);
     color: #fff;
-    border-color: #1a5c38;
+    border-color: var(--primary);
 }
 
 .form-container input {
-    background: #f4f8f5;
+    background: var(--muted);
     border: 1px solid transparent;
     border-radius: 10px;
     padding: 12px 15px;
     margin: 8px 0;
     width: 85%;
     font-family: 'Inter', sans-serif;
-    color: #14301f;
+    color: var(--foreground);
     transition: border-color 150ms ease;
 }
 
 .form-container input:focus {
     outline: none;
-    border-color: #1a5c38;
-    background: #fff;
+    border-color: var(--primary);
+    background: var(--card);
 }
 
 .auth-page button {
     border-radius: 999px;
-    border: 1px solid #1a5c38;
-    background: #1a5c38;
+    border: 1px solid var(--primary);
+    background: var(--primary);
     color: #fff;
     font-family: 'Inter', sans-serif;
     font-size: 13px;
@@ -265,7 +265,7 @@
 /* Auth toggle (Email / Mobile tab switcher) */
 .auth-toggle {
     display: inline-flex;
-    background: #f4f8f5;
+    background: var(--muted);
     border-radius: 999px;
     padding: 3px;
     margin: 8px 0 4px;
@@ -280,19 +280,19 @@
     border-radius: 999px !important;
     border: none !important;
     background: transparent !important;
-    color: #5c6b62 !important;
+    color: var(--muted-foreground) !important;
     cursor: pointer;
     transition: all 150ms ease;
     letter-spacing: .2px;
 }
 
 .auth-toggle-btn:hover {
-    color: #1a5c38 !important;
+    color: var(--primary) !important;
     background: transparent !important;
 }
 
 .auth-toggle-btn.active {
-    background: #1a5c38 !important;
+    background: var(--primary) !important;
     color: #fff !important;
 }
 

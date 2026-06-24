@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X, ChevronDown, Smartphone } from "lucide-react";
 import { PLAY_STORE_URL, DEALER_APP_URL, openInNewTab } from "@/constants/links";
+import { ThemeToggle } from "./ThemeToggle";
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -16,7 +17,7 @@ export function Header() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
-        ? "bg-white/95 backdrop-blur-md shadow-sm border-b border-green-100"
+        ? "bg-card/95 backdrop-blur-md shadow-sm border-b border-border"
         : "bg-transparent"
         }`}
     >
@@ -35,21 +36,21 @@ export function Header() {
         <nav className="hidden md:flex items-center gap-8">
           <a
             href="#destinations"
-            className={`text-sm transition-colors hover:text-[#1a5c38] ${scrolled ? "text-gray-700" : "text-white/90"}`}
+            className={`text-sm transition-colors hover:text-primary ${scrolled ? "text-foreground" : "text-white/90"}`}
             style={{ fontFamily: "'Inter', sans-serif", fontWeight: 500 }}
           >
             Destinations
           </a>
           <a
             href="#explore"
-            className={`text-sm transition-colors hover:text-[#1a5c38] ${scrolled ? "text-gray-700" : "text-white/90"}`}
+            className={`text-sm transition-colors hover:text-primary ${scrolled ? "text-foreground" : "text-white/90"}`}
             style={{ fontFamily: "'Inter', sans-serif", fontWeight: 500 }}
           >
             Explore India
           </a>
           <a
             href="#blog"
-            className={`text-sm transition-colors hover:text-[#1a5c38] ${scrolled ? "text-gray-700" : "text-white/90"}`}
+            className={`text-sm transition-colors hover:text-primary ${scrolled ? "text-foreground" : "text-white/90"}`}
             style={{ fontFamily: "'Inter', sans-serif", fontWeight: 500 }}
           >
             Riding Guides
@@ -61,7 +62,7 @@ export function Header() {
           <button
             onClick={() => openInNewTab(DEALER_APP_URL)}
             className={`text-sm px-4 py-2 rounded-full border transition-all ${scrolled
-              ? "border-[#1a5c38] text-[#1a5c38] hover:bg-[#1a5c38] hover:text-white"
+              ? "border-primary text-primary hover:bg-primary hover:text-primary-foreground"
               : "border-white/60 text-white hover:bg-white/10"
               }`}
             style={{ fontFamily: "'Inter', sans-serif", fontWeight: 500 }}
@@ -71,7 +72,7 @@ export function Header() {
           <button
             onClick={() => openInNewTab(PLAY_STORE_URL)}
             className={`flex items-center gap-1.5 text-sm px-4 py-2 rounded-full transition-all ${scrolled
-              ? "bg-[#1a5c38] text-white hover:bg-[#0f3d21]"
+              ? "bg-primary text-primary-foreground hover:bg-primary/85"
               : "bg-white/15 text-white hover:bg-white/25"
               }`}
             style={{ fontFamily: "'Inter', sans-serif", fontWeight: 500 }}
@@ -79,10 +80,11 @@ export function Header() {
             <Smartphone size={15} />
             Get App
           </button>
+          <ThemeToggle />
           <Link
             to="/login"
             className={`text-sm px-4 py-2 rounded-full transition-all ${scrolled
-              ? "text-gray-700 hover:text-[#1a5c38]"
+              ? "text-foreground hover:text-primary"
               : "text-white/80 hover:text-white"
               }`}
             style={{ fontFamily: "'Inter', sans-serif", fontWeight: 500 }}
@@ -92,22 +94,25 @@ export function Header() {
         </div>
 
         {/* Mobile toggle */}
-        <button
-          className={`md:hidden p-2 rounded-lg ${scrolled ? "text-gray-700" : "text-white"}`}
-          onClick={() => setMobileOpen(!mobileOpen)}
-        >
-          {mobileOpen ? <X size={22} /> : <Menu size={22} />}
-        </button>
+        <div className="md:hidden flex items-center gap-2">
+          <ThemeToggle />
+          <button
+            className={`p-2 rounded-lg ${scrolled ? "text-foreground" : "text-white"}`}
+            onClick={() => setMobileOpen(!mobileOpen)}
+          >
+            {mobileOpen ? <X size={22} /> : <Menu size={22} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu */}
       {mobileOpen && (
-        <div className="md:hidden bg-white border-t border-gray-100 px-6 py-4 flex flex-col gap-4">
+        <div className="md:hidden bg-card border-t border-border px-6 py-4 flex flex-col gap-4">
           {["Destinations", "Explore India", "Riding Guides"].map((item) => (
             <a
               key={item}
               href="#"
-              className="text-gray-700 text-sm py-2 border-b border-gray-50 last:border-0"
+              className="text-foreground text-sm py-2 border-b border-border last:border-0"
               style={{ fontFamily: "'Inter', sans-serif" }}
               onClick={() => setMobileOpen(false)}
             >
@@ -117,14 +122,14 @@ export function Header() {
           <div className="flex gap-3 pt-2">
             <button
               onClick={() => { openInNewTab(DEALER_APP_URL); setMobileOpen(false); }}
-              className="flex-1 text-center text-sm px-4 py-2.5 rounded-full border border-[#1a5c38] text-[#1a5c38]"
+              className="flex-1 text-center text-sm px-4 py-2.5 rounded-full border border-primary text-primary"
               style={{ fontFamily: "'Inter', sans-serif", fontWeight: 500 }}
             >
               Link My Bike
             </button>
             <Link
               to="/login"
-              className="flex-1 text-center text-sm px-4 py-2.5 rounded-full bg-[#1a5c38] text-white"
+              className="flex-1 text-center text-sm px-4 py-2.5 rounded-full bg-primary text-primary-foreground"
               style={{ fontFamily: "'Inter', sans-serif", fontWeight: 500 }}
               onClick={() => setMobileOpen(false)}
             >

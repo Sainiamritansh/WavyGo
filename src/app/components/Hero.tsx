@@ -58,9 +58,9 @@ export function Hero() {
             </p>
 
             {/* Booking Card */}
-            <div className="bg-white rounded-2xl p-6 shadow-2xl max-w-lg">
+            <div className="bg-card rounded-2xl p-6 shadow-2xl max-w-lg">
               <p
-                className="text-[#1a5c38] mb-4"
+                className="text-primary mb-4"
                 style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 700, fontSize: "1.1rem" }}
               >
                 Book Self-Drive Bikes
@@ -68,25 +68,25 @@ export function Hero() {
 
               {/* Location */}
               <div className="relative mb-3">
-                <MapPin size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
+                <MapPin size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" />
                 <input
                   type="text"
                   placeholder="Where are you headed?"
                   value={location}
                   onChange={(e) => handleLocationChange(e.target.value)}
-                  className="w-full pl-9 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-gray-800 text-sm placeholder-gray-400 focus:outline-none focus:border-[#1a5c38] transition-colors"
+                  className="w-full pl-9 pr-4 py-3 bg-muted border border-border rounded-xl text-foreground text-sm placeholder-muted-foreground focus:outline-none focus:border-primary transition-colors"
                   style={{ fontFamily: "'Inter', sans-serif" }}
                 />
                 {suggestions.length > 0 && (
-                  <div className="absolute top-full left-0 right-0 bg-white border border-gray-100 rounded-xl shadow-lg mt-1 overflow-hidden z-20">
+                  <div className="absolute top-full left-0 right-0 bg-card border border-border rounded-xl shadow-lg mt-1 overflow-hidden z-20">
                     {suggestions.map((s) => (
                       <button
                         key={s}
-                        className="w-full text-left px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 flex items-center gap-2"
+                        className="w-full text-left px-4 py-2.5 text-sm text-foreground hover:bg-muted flex items-center gap-2"
                         style={{ fontFamily: "'Inter', sans-serif" }}
                         onClick={() => { setLocation(s); setSuggestions([]); }}
                       >
-                        <MapPin size={13} className="text-[#1a5c38]" />
+                        <MapPin size={13} className="text-primary" />
                         {s}
                       </button>
                     ))}
@@ -97,44 +97,44 @@ export function Hero() {
               {/* Dates */}
               <div className="grid grid-cols-2 gap-3 mb-4">
                 <div className="relative">
-                  <Calendar size={15} className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
+                  <Calendar size={15} className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" />
                   <input
                     type="datetime-local"
                     value={pickupDate}
                     onChange={(e) => setPickupDate(e.target.value)}
-                    className="w-full pl-9 pr-3 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm text-gray-700 focus:outline-none focus:border-[#1a5c38] transition-colors"
+                    className="w-full pl-9 pr-3 py-3 bg-muted border border-border rounded-xl text-sm text-foreground focus:outline-none focus:border-primary transition-colors"
                     style={{ fontFamily: "'Inter', sans-serif" }}
                   />
                 </div>
                 <div className="relative">
-                  <Calendar size={15} className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
+                  <Calendar size={15} className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" />
                   <input
                     type="datetime-local"
                     value={returnDate}
                     onChange={(e) => setReturnDate(e.target.value)}
-                    className="w-full pl-9 pr-3 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm text-gray-700 focus:outline-none focus:border-[#1a5c38] transition-colors"
+                    className="w-full pl-9 pr-3 py-3 bg-muted border border-border rounded-xl text-sm text-foreground focus:outline-none focus:border-primary transition-colors"
                     style={{ fontFamily: "'Inter', sans-serif" }}
                   />
                 </div>
               </div>
 
               <button
-                className="w-full py-3.5 rounded-xl text-white flex items-center justify-center gap-2 transition-all hover:opacity-90 active:scale-[0.98]"
-                style={{ background: "#1a5c38", fontFamily: "'Outfit', sans-serif", fontWeight: 700, fontSize: "1rem" }}
+                className="w-full py-3.5 rounded-xl bg-primary text-primary-foreground flex items-center justify-center gap-2 transition-all hover:opacity-90 active:scale-[0.98]"
+                style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 700, fontSize: "1rem" }}
               >
                 <Search size={18} />
                 Search Available Bikes
               </button>
 
               {/* Trust signals */}
-              <div className="flex items-center gap-4 mt-4 pt-4 border-t border-gray-100">
+              <div className="flex items-center gap-4 mt-4 pt-4 border-t border-border">
                 {[
                   { icon: Shield, text: "100% Trip Protection" },
                   { icon: Zap, text: "Instant Booking" },
                   { icon: Star, text: "4.8★ Rated Platform" },
                 ].map(({ icon: Icon, text }) => (
-                  <div key={text} className="flex items-center gap-1.5 text-xs text-gray-500" style={{ fontFamily: "'Inter', sans-serif" }}>
-                    <Icon size={12} className="text-[#1a5c38]" />
+                  <div key={text} className="flex items-center gap-1.5 text-xs text-muted-foreground" style={{ fontFamily: "'Inter', sans-serif" }}>
+                    <Icon size={12} className="text-primary" />
                     {text}
                   </div>
                 ))}

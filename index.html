@@ -8,7 +8,16 @@
       <title>Wavygo-website</title>
       <meta name="description" content="Offers a platform connecting users with travel services and experiences, simplifying trip planning and enhancing travel convenience." />
       <meta name="robots" content="noindex, nofollow" />
-      <style>html, body { height: 100%; margin: 0; } #root { height: 100%; }</style>
+    <style>html, body { height: 100%; margin: 0; } #root { height: 100%; }</style>
+      <script>
+        // Prevent FOUC: apply saved theme before first paint
+        (function() {
+          var t = localStorage.getItem('wavygo-theme');
+          if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+          document.documentElement.setAttribute('data-theme', t);
+          document.documentElement.classList.add('no-transition');
+        })();
+      </script>
       
     </head>
 

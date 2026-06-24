@@ -14,8 +14,8 @@ export function BlogDetails() {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">Blog Not Found</h1>
-          <Link to="/" className="text-[#1a5c38] hover:underline">
+          <h1 className="text-3xl font-bold text-foreground mb-2">Blog Not Found</h1>
+          <Link to="/" className="text-primary hover:underline">
             ← Back to Blogs
           </Link>
         </div>
@@ -250,12 +250,12 @@ export function BlogDetails() {
   const tableOfContents = content.sections.map(s => s.title);
 
   return (
-    <div className="bg-white">
+    <div className="bg-background">
       {/* Navigation */}
-      <div className="max-w-4xl mx-auto px-6 py-6 border-b border-gray-100">
+      <div className="max-w-4xl mx-auto px-6 py-6 border-b border-border">
         <Link
           to="/"
-          className="inline-flex items-center gap-1 text-[#1a5c38] hover:gap-2 transition-all"
+          className="inline-flex items-center gap-1 text-primary hover:gap-2 transition-all"
         >
           <ChevronRight size={16} className="rotate-180" />
           Back to Blogs
@@ -279,30 +279,30 @@ export function BlogDetails() {
 
         {/* Title */}
         <h1
-          className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight"
+          className="text-4xl md:text-5xl font-bold text-foreground mb-6 leading-tight"
           style={{ fontFamily: "'Outfit', sans-serif" }}
         >
           {blog.title}
         </h1>
 
         {/* Meta Information */}
-        <div className="flex flex-col sm:flex-row sm:items-center gap-4 md:gap-8 pb-8 border-b border-gray-200">
+        <div className="flex flex-col sm:flex-row sm:items-center gap-4 md:gap-8 pb-8 border-b border-border">
           <div className="flex items-center gap-3">
             <div className="w-12 h-12 bg-gradient-to-br from-[#1a5c38] to-[#f5a623] rounded-full flex items-center justify-center">
               <User size={20} className="text-white" />
             </div>
             <div>
-              <p className="text-sm text-gray-500">By</p>
-              <p className="font-semibold text-gray-900">{blog.author}</p>
+              <p className="text-sm text-muted-foreground">By</p>
+              <p className="font-semibold text-foreground">{blog.author}</p>
             </div>
           </div>
 
-          <div className="flex items-center gap-2 text-gray-600">
+          <div className="flex items-center gap-2 text-muted-foreground">
             <Calendar size={18} className="text-[#f5a623]" />
             <span>{blog.date}</span>
           </div>
 
-          <div className="flex items-center gap-2 text-gray-600">
+          <div className="flex items-center gap-2 text-muted-foreground">
             <Clock size={18} className="text-[#f5a623]" />
             <span>{blog.readTime}</span>
           </div>
@@ -319,12 +319,12 @@ export function BlogDetails() {
       </div>
 
       {/* Main Content */}
-      <div className="bg-gradient-to-b from-white to-gray-50">
+      <div className="bg-gradient-to-b from-background to-muted">
         <div className="max-w-4xl mx-auto px-6 py-12">
           {/* Introduction */}
           <div className="mb-12 p-6 bg-blue-50 border-l-4 border-[#1a5c38] rounded-r-xl">
             <p
-              className="text-lg text-gray-700 leading-relaxed italic"
+              className="text-lg text-muted-foreground leading-relaxed italic"
               style={{ fontFamily: "'Inter', sans-serif" }}
             >
               {blog.excerpt}
@@ -332,16 +332,16 @@ export function BlogDetails() {
           </div>
 
           {/* Table of Contents */}
-          <div className="mb-12 p-6 bg-white border border-gray-200 rounded-2xl">
-            <h3 className="font-bold text-lg mb-4 text-gray-900">In This Article</h3>
+          <div className="mb-12 p-6 bg-card border border-border rounded-2xl">
+            <h3 className="font-bold text-lg mb-4 text-foreground">In This Article</h3>
             <div className="space-y-2">
               {tableOfContents.map((item, idx) => (
                 <a
                   key={idx}
                   href={`#section-${idx}`}
-                  className="flex items-center gap-3 text-[#1a5c38] hover:text-[#f5a623] transition-colors py-2"
+                  className="flex items-center gap-3 text-primary hover:text-accent transition-colors py-2"
                 >
-                  <span className="flex-shrink-0 w-6 h-6 rounded-full bg-[#1a5c38] text-white text-xs flex items-center justify-center">
+                  <span className="flex-shrink-0 w-6 h-6 rounded-full bg-primary text-primary-foreground text-xs flex items-center justify-center">
                     {idx + 1}
                   </span>
                   <span className="hover:underline">{item}</span>
@@ -355,7 +355,7 @@ export function BlogDetails() {
             {content.sections.map((section, idx) => (
               <div key={idx} id={`section-${idx}`} className="scroll-mt-20">
                 <h2
-                  className="text-3xl font-bold text-gray-900 mb-4"
+                  className="text-3xl font-bold text-foreground mb-4"
                   style={{ fontFamily: "'Outfit', sans-serif" }}
                 >
                   {section.title}
@@ -365,11 +365,11 @@ export function BlogDetails() {
                   <div className="bg-gradient-to-r from-[#1a5c38]/5 to-[#f5a623]/5 border border-[#1a5c38]/20 rounded-2xl p-6 mb-6">
                     <div className="flex gap-3 mb-4">
                       <Lightbulb size={24} className="text-[#f5a623] flex-shrink-0 mt-1" />
-                      <h4 className="text-lg font-semibold text-gray-900">Key Takeaways</h4>
+                      <h4 className="text-lg font-semibold text-foreground">Key Takeaways</h4>
                     </div>
                     <ul className="space-y-3">
                       {section.items?.map((item, i) => (
-                        <li key={i} className="flex gap-3 text-gray-700">
+                        <li key={i} className="flex gap-3 text-muted-foreground">
                           <CheckmarkIcon />
                           <span>{item}</span>
                         </li>
@@ -377,7 +377,7 @@ export function BlogDetails() {
                     </ul>
                   </div>
                 ) : (
-                  <div className="space-y-4 text-gray-700 leading-relaxed">
+                  <div className="space-y-4 text-muted-foreground leading-relaxed">
                     {section.content?.map((para, i) => (
                       <p key={i} className="text-base">
                         {para}
@@ -394,11 +394,11 @@ export function BlogDetails() {
             <div className="mt-12 p-6 bg-amber-50 border border-amber-200 rounded-2xl">
               <div className="flex gap-3 mb-4">
                 <Lightbulb size={24} className="text-amber-600 flex-shrink-0 mt-1" />
-                <h3 className="text-lg font-semibold text-gray-900">Pro Tips</h3>
+                <h3 className="text-lg font-semibold text-foreground">Pro Tips</h3>
               </div>
               <ul className="space-y-3">
                 {content.tips.map((tip, idx) => (
-                  <li key={idx} className="flex gap-3 text-gray-700">
+                  <li key={idx} className="flex gap-3 text-muted-foreground">
                     <ArrowIcon />
                     <span>{tip}</span>
                   </li>
@@ -412,11 +412,11 @@ export function BlogDetails() {
             <div className="mt-8 p-6 bg-red-50 border border-red-200 rounded-2xl">
               <div className="flex gap-3 mb-4">
                 <AlertCircle size={24} className="text-red-600 flex-shrink-0 mt-1" />
-                <h3 className="text-lg font-semibold text-gray-900">Important Warnings</h3>
+                <h3 className="text-lg font-semibold text-foreground">Important Warnings</h3>
               </div>
               <ul className="space-y-3">
                 {content.warnings.map((warning, idx) => (
-                  <li key={idx} className="flex gap-3 text-gray-700">
+                  <li key={idx} className="flex gap-3 text-muted-foreground">
                     <span className="text-red-600 font-bold">•</span>
                     <span>{warning}</span>
                   </li>
@@ -429,9 +429,9 @@ export function BlogDetails() {
 
       {/* Related Articles */}
       {relatedBlogs.length > 0 && (
-        <div className="bg-gray-50 py-16 border-t border-gray-200">
+        <div className="bg-muted py-16 border-t border-border">
           <div className="max-w-4xl mx-auto px-6">
-            <h3 className="text-3xl font-bold text-gray-900 mb-8" style={{ fontFamily: "'Outfit', sans-serif" }}>
+            <h3 className="text-3xl font-bold text-foreground mb-8" style={{ fontFamily: "'Outfit', sans-serif" }}>
               Related Articles
             </h3>
             <div className="grid md:grid-cols-3 gap-6">
@@ -439,7 +439,7 @@ export function BlogDetails() {
                 <Link
                   key={relatedBlog.id}
                   to={`/blog/${relatedBlog.id}`}
-                  className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow"
+                  className="group bg-card rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow"
                 >
                   <div className="h-40 overflow-hidden">
                     <img
@@ -450,10 +450,10 @@ export function BlogDetails() {
                   </div>
                   <div className="p-4">
                     <p className="text-xs text-[#f5a623] font-semibold mb-2">{relatedBlog.category}</p>
-                    <h4 className="font-semibold text-gray-900 mb-2 line-clamp-2 group-hover:text-[#1a5c38] transition-colors">
+                    <h4 className="font-semibold text-foreground mb-2 line-clamp-2 group-hover:text-primary transition-colors">
                       {relatedBlog.title}
                     </h4>
-                    <p className="text-xs text-gray-500">{relatedBlog.readTime}</p>
+                    <p className="text-xs text-muted-foreground">{relatedBlog.readTime}</p>
                   </div>
                 </Link>
               ))}
@@ -463,12 +463,12 @@ export function BlogDetails() {
       )}
 
       {/* Footer CTA */}
-      <div className="bg-white border-t border-gray-200 py-12">
+      <div className="bg-card border-t border-border py-12">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <p className="text-gray-600 mb-6">Ready to explore more riding stories and guides?</p>
+          <p className="text-muted-foreground mb-6">Ready to explore more riding stories and guides?</p>
           <Link
             to="/"
-            className="inline-flex items-center gap-2 px-8 py-3 bg-[#1a5c38] text-white font-semibold rounded-lg hover:bg-[#0f3d27] transition-colors"
+            className="inline-flex items-center gap-2 px-8 py-3 bg-primary text-primary-foreground font-semibold rounded-lg hover:bg-primary/85 transition-colors"
           >
             Back to All Articles
             <ArrowRight size={18} />

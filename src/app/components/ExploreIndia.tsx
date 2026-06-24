@@ -82,7 +82,7 @@ export function ExploreIndia() {
   };
 
   return (
-    <section id="explore" className="py-20 bg-white">
+    <section id="explore" className="py-20 bg-card">
       <div className="max-w-7xl mx-auto">
 
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4 px-6">
@@ -90,17 +90,17 @@ export function ExploreIndia() {
             <p className="text-[#f5a623] mb-2 uppercase tracking-widest text-xs font-semibold">
               Road Trip Inspiration
             </p>
-            <h2 className="text-[#111827] text-3xl font-extrabold">
+            <h2 className="text-foreground text-3xl font-extrabold">
               Iconic Rides Across India
             </h2>
-            <p className="text-gray-500 mt-2 max-w-xl text-sm">
+            <p className="text-muted-foreground mt-2 max-w-xl text-sm">
               From Himalayan highways to coastal curves — discover routes that riders talk about for a lifetime.
             </p>
           </div>
 
           <button
             onClick={() => navigate("/routes")}
-            className="flex items-center gap-1.5 text-xs text-white bg-[#1a5c38] px-4 py-2 rounded-full hover:opacity-90 transition"
+            className="flex items-center gap-1.5 text-xs text-primary-foreground bg-primary px-4 py-2 rounded-full hover:opacity-90 transition"
           >
             Explore All Routes
             <ArrowRight size={14} />

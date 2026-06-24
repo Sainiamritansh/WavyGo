@@ -18,7 +18,7 @@ export function RouteDetails() {
     <div className="max-w-5xl mx-auto px-6 py-12">
       <Link
         to="/"
-        className="text-[#1a5c38] hover:underline"
+        className="text-primary hover:underline"
       >
         ← Back to Routes
       </Link>
@@ -33,7 +33,7 @@ export function RouteDetails() {
       </div>
 
       {/* Route Tag */}
-      <span className="inline-block px-4 py-2 rounded-full bg-green-100 text-green-700 text-sm mb-4">
+      <span className="inline-block px-4 py-2 rounded-full bg-secondary text-secondary-foreground text-sm mb-4">
         {route.tag}
       </span>
 
@@ -42,29 +42,29 @@ export function RouteDetails() {
         {route.title}
       </h1>
 
-      <p className="text-xl text-gray-600 mb-8">
+      <p className="text-xl text-muted-foreground mb-8">
         {route.subtitle}
       </p>
 
       {/* Stats */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
-        <div className="bg-gray-100 p-4 rounded-xl text-center">
-          <p className="text-gray-500 text-sm">Distance</p>
+        <div className="bg-muted p-4 rounded-xl text-center">
+          <p className="text-muted-foreground text-sm">Distance</p>
           <p className="font-bold">{route.km}</p>
         </div>
 
-        <div className="bg-gray-100 p-4 rounded-xl text-center">
-          <p className="text-gray-500 text-sm">Duration</p>
+        <div className="bg-muted p-4 rounded-xl text-center">
+          <p className="text-muted-foreground text-sm">Duration</p>
           <p className="font-bold">{route.days}</p>
         </div>
 
-        <div className="bg-gray-100 p-4 rounded-xl text-center">
-          <p className="text-gray-500 text-sm">Difficulty</p>
+        <div className="bg-muted p-4 rounded-xl text-center">
+          <p className="text-muted-foreground text-sm">Difficulty</p>
           <p className="font-bold">Moderate</p>
         </div>
 
-        <div className="bg-gray-100 p-4 rounded-xl text-center">
-          <p className="text-gray-500 text-sm">Best Season</p>
+        <div className="bg-muted p-4 rounded-xl text-center">
+          <p className="text-muted-foreground text-sm">Best Season</p>
           <p className="font-bold">May - Sept</p>
         </div>
       </div>
@@ -75,7 +75,7 @@ export function RouteDetails() {
           Route Overview
         </h2>
 
-        <p className="text-gray-700 leading-8">
+        <p className="text-muted-foreground leading-8">
           {route.title} is one of India's most iconic motorcycle
           adventures. Riders experience breathtaking scenery,
           challenging roads, mountain passes, and unforgettable
@@ -89,7 +89,7 @@ export function RouteDetails() {
           Route Highlights
         </h2>
 
-        <ul className="list-disc pl-6 text-gray-700 leading-8">
+        <ul className="list-disc pl-6 text-muted-foreground leading-8">
           <li>Beautiful mountain landscapes</li>
           <li>Adventure riding experience</li>
           <li>Scenic photography spots</li>
@@ -104,7 +104,7 @@ export function RouteDetails() {
           Travel Tips
         </h2>
 
-        <ul className="list-disc pl-6 text-gray-700 leading-8">
+        <ul className="list-disc pl-6 text-muted-foreground leading-8">
           <li>Carry riding gear and rain protection.</li>
           <li>Check fuel stations beforehand.</li>
           <li>Keep emergency contacts available.</li>
@@ -114,7 +114,7 @@ export function RouteDetails() {
       </section>
 
       {/* CTA */}
-      <div className="bg-[#1a5c38] text-white rounded-2xl p-8 text-center">
+      <div className="bg-primary text-primary-foreground rounded-2xl p-8 text-center">
         <h3 className="text-2xl font-bold mb-3">
           Ready for this adventure?
         </h3>
@@ -125,7 +125,7 @@ export function RouteDetails() {
 
         <Link
           to="/"
-          className="inline-block bg-white text-[#1a5c38] px-6 py-3 rounded-xl font-semibold"
+          className="inline-block bg-card text-primary px-6 py-3 rounded-xl font-semibold"
         >
           Explore Bikes
         </Link>
