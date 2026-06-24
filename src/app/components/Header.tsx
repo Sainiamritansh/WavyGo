@@ -24,18 +24,12 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
         {/* Logo */}
         <a href="#" className="flex items-center gap-2">
-          <div className="flex items-center gap-1">
-            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-              <path d="M4 22 Q10 8 16 14 Q22 20 28 6" stroke="#1a5c38" strokeWidth="3" strokeLinecap="round" fill="none" />
-              <circle cx="28" cy="6" r="3" fill="#f5a623" />
-              <circle cx="4" cy="22" r="2" fill="#1a5c38" />
-            </svg>
-            <span
-              className="text-[1.35rem] tracking-tight"
-              style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 800, color: "#1a5c38" }}
-            >
-              WavyGo
-            </span>
+          <div className="flex items-center">
+            <img
+            src={scrolled ? "/logo-bg.png" : "/white-logobg.png"}
+            alt="WavyGo"
+            className="h-45 w-60 object-contain transition-all duration-300"
+            />
           </div>
         </a>
         {/* Desktop Nav */}
