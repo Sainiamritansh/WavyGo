@@ -1,13 +1,19 @@
 import { BikeCategory } from "@/types";
 
+import scooter from "../public/images.jpeg/scooty.jpeg";
+import commuter from "../public/images.jpeg/commuter.jpeg";
+import cruiser from "../public/images.jpeg/cruiser.jpeg";
+import sports from "../public/images.jpeg/sports.jpeg";
+import ebike from "../public/images.jpeg/ebike.jpeg";
+
 export const BIKE_CATEGORIES: BikeCategory[] = [
   {
-    id: "scooter",
-    name: "Scooter",
-    desc: "City rides & quick errands",
-    price: "₹299",
-    img: "https://images.unsplash.com/photo-1780504863256-bdbb13bddfbc?w=500&h=320&fit=crop&auto=format",
-    tag: "Most Popular",
+    id: "ebike",
+    name: "E-Bike",
+    desc: "Eco-friendly urban mobility",
+    price: "₹249",
+    img: ebike,
+    tag: "Eco Choice",
     color: "#e8f5ee",
   },
   {
@@ -15,17 +21,17 @@ export const BIKE_CATEGORIES: BikeCategory[] = [
     name: "Commuter",
     desc: "Daily commutes & short trips",
     price: "₹399",
-    img: "https://images.unsplash.com/photo-1663407978077-ca116e36abf0?w=500&h=320&fit=crop&auto=format",
+    img: commuter,
     tag: "Best Value",
-    color: "#fef9ee",
+    color: "#e8f5ee",
   },
   {
-    id: "adventure",
-    name: "Adventure",
-    desc: "Mountain roads & off-road trails",
-    price: "₹799",
-    img: "https://images.unsplash.com/photo-1699972551272-e0eaee1916b2?w=500&h=320&fit=crop&auto=format",
-    tag: "Top Rated",
+    id: "scooter",
+    name: "Scooter",
+    desc: "City rides & quick errands",
+    price: "₹299",
+    img: scooter,
+    tag: "Most Popular",
     color: "#e8f5ee",
   },
   {
@@ -33,26 +39,17 @@ export const BIKE_CATEGORIES: BikeCategory[] = [
     name: "Cruiser",
     desc: "Long highway touring",
     price: "₹999",
-    img: "https://images.unsplash.com/photo-1550149550-33b46c745e03?w=500&h=320&fit=crop&auto=format",
+    img: cruiser,
     tag: "Premium",
-    color: "#fef9ee",
+    color: "#e8f5ee",
   },
   {
     id: "sports",
     name: "Sports",
     desc: "High-performance riding",
     price: "₹1,299",
-    img: "https://images.unsplash.com/photo-1610202926204-c0c9b7d8f112?w=500&h=320&fit=crop&auto=format",
+    img: sports,
     tag: "Thrill Seekers",
     color: "#e8f5ee",
-  },
-  {
-    id: "ebike",
-    name: "E-Bike",
-    desc: "Eco-friendly urban mobility",
-    price: "₹249",
-    img: "https://images.unsplash.com/photo-1648204732508-bae5945d2e5a?w=500&h=320&fit=crop&auto=format",
-    tag: "Eco Choice",
-    color: "#edf7f0",
   },
 ];
