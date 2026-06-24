@@ -252,12 +252,11 @@ Wavygo/
 │   │   └── components/
 │   │       ├── figma/
 │   │       │   └── ImageWithFallback.tsx   # Figma Make image helper (review in Phase 3)
-│   │       └── ui/                    # ⚠️ 46 shadcn/Radix UI components — MOSTLY UNUSED
-│   │           ├── input.tsx          # ✅ KEEP — used in Hero booking form
-│   │           ├── label.tsx          # ✅ KEEP — used in Hero booking form
-│   │           ├── utils.ts           # ✅ KEEP — cn() utility
-│   │           ├── use-mobile.ts      # ✅ KEEP — responsive hook
-│   │           └── [42 others]        # ❌ DELETE in Phase 3
+│   │       └── ui/                    #  46 shadcn/Radix UI components — MOSTLY UNUSED
+│   │           ├── input.tsx          #  KEEP — used in Hero booking form
+│   │           ├── label.tsx          #  KEEP — used in Hero booking form
+│   │           ├── utils.ts           #  KEEP — cn() utility
+│   │           ├── use-mobile.ts      #  KEEP — responsive hook
 │   │
 │   ├── App.tsx                        # Root component — composes all 17 sections
 │   └── main.tsx                       # React DOM entry point
