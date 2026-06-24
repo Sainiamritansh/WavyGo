@@ -12,13 +12,13 @@ export function Testimonials() {
   const renderCard = (review: (typeof TESTIMONIALS)[number], copyIdx: number) => (
     <div
       key={`${review.id}-${copyIdx}`}
-      className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow relative flex-shrink-0"
+      className="bg-card rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow relative flex-shrink-0"
       style={{
         width: CARD_W,
       }}
     >
       {/* Quote icon — unchanged */}
-      <Quote size={28} className="text-gray-100 absolute top-4 right-4" fill="currentColor" />
+      <Quote size={28} className="text-border absolute top-4 right-4" fill="currentColor" />
 
       {/* Header — unchanged */}
       <div className="flex items-start gap-3 mb-4">
@@ -30,16 +30,16 @@ export function Testimonials() {
         </div>
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2">
-            <p className="text-gray-900" style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 700, fontSize: "0.95rem" }}>{review.name}</p>
+            <p className="text-foreground" style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 700, fontSize: "0.95rem" }}>{review.name}</p>
             {review.verified && (
-              <span className="text-[#1a5c38]" title="Verified rider">
+              <span className="text-primary" title="Verified rider">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
                 </svg>
               </span>
             )}
           </div>
-          <p className="text-gray-500 text-xs" style={{ fontFamily: "'Inter', sans-serif" }}>{review.role}</p>
+          <p className="text-muted-foreground text-xs" style={{ fontFamily: "'Inter', sans-serif" }}>{review.role}</p>
         </div>
       </div>
 
@@ -51,7 +51,7 @@ export function Testimonials() {
       </div>
 
       {/* Review text — unchanged */}
-      <p className="text-gray-600 text-sm leading-relaxed mb-4" style={{ fontFamily: "'Inter', sans-serif" }}>
+      <p className="text-muted-foreground text-sm leading-relaxed mb-4" style={{ fontFamily: "'Inter', sans-serif" }}>
         "{review.text}"
       </p>
 
@@ -59,11 +59,11 @@ export function Testimonials() {
       <div className="flex items-center justify-between">
         <span
           className="text-xs px-2.5 py-1 rounded-full"
-          style={{ background: "#e8f5ee", color: "#1a5c38", fontFamily: "'Inter', sans-serif", fontWeight: 600 }}
+          style={{ background: "var(--secondary)", color: "var(--secondary-foreground)", fontFamily: "'Inter', sans-serif", fontWeight: 600 }}
         >
           {review.tag}
         </span>
-        <span className="text-xs text-gray-400" style={{ fontFamily: "'Inter', sans-serif" }}>
+        <span className="text-xs text-muted-foreground" style={{ fontFamily: "'Inter', sans-serif" }}>
           🛣️ {review.trip}
         </span>
       </div>
@@ -71,7 +71,7 @@ export function Testimonials() {
   );
 
   return (
-    <section className="py-20 bg-[#f7faf8]">
+    <section className="py-20 bg-background">
       <div className="max-w-7xl mx-auto">
 
         {/* ── Header ─────────────────────────────────────────── */}
@@ -84,12 +84,12 @@ export function Testimonials() {
               Real Riders, Real Stories
             </p>
             <h2
-              className="text-[#111827] mb-3"
+              className="text-foreground mb-3"
               style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 800, fontSize: "clamp(1.8rem, 3.5vw, 2.6rem)" }}
             >
               Why Riders Choose WavyGo
             </h2>
-            <p className="text-gray-500 max-w-lg" style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.95rem" }}>
+            <p className="text-muted-foreground max-w-lg" style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.95rem" }}>
               From students to seasoned tourers — thousands of riders trust WavyGo for every kind of journey.
             </p>
           </div>
@@ -103,8 +103,8 @@ export function Testimonials() {
                 { val: "98%", label: "Would recommend" },
               ].map(({ val, label }) => (
                 <div key={label} className="text-center">
-                  <p className="text-[#1a5c38]" style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 800, fontSize: "1.5rem" }}>{val}</p>
-                  <p className="text-gray-500 text-sm" style={{ fontFamily: "'Inter', sans-serif" }}>{label}</p>
+                  <p className="text-primary" style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 800, fontSize: "1.5rem" }}>{val}</p>
+                  <p className="text-muted-foreground text-sm" style={{ fontFamily: "'Inter', sans-serif" }}>{label}</p>
                 </div>
               ))}
             </div>

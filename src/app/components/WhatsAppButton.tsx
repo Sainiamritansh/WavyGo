@@ -12,7 +12,7 @@ export function WhatsAppButton() {
     <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
       {/* Chat popup */}
       {open && (
-        <div className="bg-white rounded-2xl shadow-2xl w-72 overflow-hidden border border-gray-100">
+        <div className="bg-card rounded-2xl shadow-2xl w-72 overflow-hidden border border-border">
           {/* Header */}
           <div className="p-4 flex items-center gap-3" style={{ background: "#1a5c38" }}>
             <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
@@ -35,13 +35,13 @@ export function WhatsAppButton() {
           {/* Message bubble */}
           <div className="p-4 bg-[#e5ddd5]">
             <div className="bg-white rounded-xl rounded-tl-none p-3 shadow-sm max-w-[85%]">
-              <p className="text-gray-700 text-sm leading-relaxed" style={{ fontFamily: "'Inter', sans-serif" }}>
+              <p className="text-foreground text-sm leading-relaxed" style={{ fontFamily: "'Inter', sans-serif" }}>
                 👋 Hi! Ready to plan your next ride?
               </p>
-              <p className="text-gray-500 text-xs mt-1" style={{ fontFamily: "'Inter', sans-serif" }}>
+              <p className="text-muted-foreground text-xs mt-1" style={{ fontFamily: "'Inter', sans-serif" }}>
                 Tell us your destination and dates — we'll find you the perfect bike!
               </p>
-              <p className="text-gray-400 text-xs text-right mt-1" style={{ fontFamily: "'Inter', sans-serif" }}>Just now ✓</p>
+              <p className="text-muted-foreground text-xs text-right mt-1" style={{ fontFamily: "'Inter', sans-serif" }}>Just now ✓</p>
             </div>
           </div>
 

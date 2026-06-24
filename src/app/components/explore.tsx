@@ -13,9 +13,9 @@ export function Explore() {
         Explore Bike Rentals
       </h1>
 
-      <p className="text-gray-500 mb-6">
+      <p className="text-muted-foreground mb-6">
         Category:{" "}
-        <span className="font-semibold text-black">
+        <span className="font-semibold text-foreground">
           {category}
         </span>
       </p>
@@ -35,13 +35,13 @@ export function Explore() {
           return (
             <div
               key={vendor.id}
-              className="border rounded-xl p-4 shadow-sm"
+              className="border border-border rounded-xl p-4 shadow-sm"
             >
               <h2 className="text-xl font-semibold">
                 {vendor.name}
               </h2>
 
-              <p className="text-sm text-gray-500 mb-3">
+              <p className="text-sm text-muted-foreground mb-3">
                 {vendor.location} • {vendor.distance} km away
               </p>
 
@@ -49,7 +49,7 @@ export function Explore() {
                 {bikes.map((bike) => (
                   <div
                     key={bike.id}
-                    className="border rounded-lg overflow-hidden"
+                    className="border border-border rounded-lg overflow-hidden"
                   >
                     <img
                       src={bike.image}
@@ -61,11 +61,11 @@ export function Explore() {
                         {bike.name}
                       </h3>
 
-                      <p className="text-gray-500 text-sm">
+                      <p className="text-muted-foreground text-sm">
                         ₹{bike.price}/day
                       </p>
 
-                      <button className="mt-2 w-full bg-green-700 text-white py-2 rounded">
+                      <button className="mt-2 w-full bg-primary text-primary-foreground py-2 rounded">
                         Book Now
                       </button>
                     </div>
@@ -78,7 +78,7 @@ export function Explore() {
       </div>
 
       {(!VENDORS || VENDORS.length === 0) && (
-        <div className="text-center text-gray-400 mt-10">
+        <div className="text-center text-muted-foreground mt-10">
           No vendors available
         </div>
       )}

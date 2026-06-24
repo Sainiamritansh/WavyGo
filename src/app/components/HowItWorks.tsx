@@ -2,22 +2,22 @@ import { HOW_IT_WORKS_STEPS } from "../../data";
 
 export function HowItWorks() {
   return (
-    <section className="py-20 bg-[#f7faf8]">
+    <section className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-14">
           <p
-            className="text-[#f5a623] mb-2 uppercase tracking-widest"
+            className="text-accent mb-2 uppercase tracking-widest"
             style={{ fontFamily: "'Inter', sans-serif", fontWeight: 600, fontSize: "0.78rem" }}
           >
             Simple by Design
           </p>
           <h2
-            className="text-[#111827]"
+            className="text-foreground"
             style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 800, fontSize: "clamp(1.8rem, 3.5vw, 2.6rem)" }}
           >
             Rent a Bike in 4 Easy Steps
           </h2>
-          <p className="text-gray-500 mt-2 max-w-lg mx-auto" style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.95rem" }}>
+          <p className="text-muted-foreground mt-2 max-w-lg mx-auto" style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.95rem" }}>
             From searching to riding, the whole process takes under 10 minutes the first time.
           </p>
         </div>
@@ -47,13 +47,13 @@ export function HowItWorks() {
               </div>
 
               <h3
-                className="text-gray-900 mb-2"
+                className="text-foreground mb-2"
                 style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 700, fontSize: "1rem" }}
               >
                 {title}
               </h3>
               <p
-                className="text-gray-500 text-sm leading-relaxed"
+                className="text-muted-foreground text-sm leading-relaxed"
                 style={{ fontFamily: "'Inter', sans-serif" }}
               >
                 {desc}
@@ -65,12 +65,12 @@ export function HowItWorks() {
         {/* CTA */}
         <div className="mt-14 text-center">
           <button
-            className="inline-flex items-center gap-2 text-white px-8 py-4 rounded-full hover:opacity-90 transition-all"
-            style={{ background: "#1a5c38", fontFamily: "'Outfit', sans-serif", fontWeight: 700, fontSize: "1rem" }}
+            className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-full hover:opacity-90 transition-all"
+            style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 700, fontSize: "1rem" }}
           >
             Find a Bike Near You
           </button>
-          <p className="text-gray-400 text-sm mt-3" style={{ fontFamily: "'Inter', sans-serif" }}>
+          <p className="text-muted-foreground text-sm mt-3" style={{ fontFamily: "'Inter', sans-serif" }}>
             No account needed to browse · Sign up only at checkout
           </p>
         </div>

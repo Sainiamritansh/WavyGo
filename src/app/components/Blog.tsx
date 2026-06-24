@@ -8,7 +8,7 @@ export function Blog() {
   const { trackRef, current, prev, next, canPrev, canNext, onMouseDown, onScroll } = useCarousel(320, 24, BLOG_POSTS.length);
 
   return (
-    <section id="blog" className="py-20 bg-[#f7faf8]">
+    <section id="blog" className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
           <div>
@@ -24,7 +24,7 @@ export function Blog() {
             </p>
 
             <h2
-              className="text-[#111827]"
+              className="text-foreground"
               style={{
                 fontFamily: "'Outfit', sans-serif",
                 fontWeight: 800,
@@ -35,7 +35,7 @@ export function Blog() {
             </h2>
 
             <p
-              className="text-gray-500 mt-2 max-w-xl"
+              className="text-muted-foreground mt-2 max-w-xl"
               style={{
                 fontFamily: "'Inter', sans-serif",
                 fontSize: "0.95rem",
@@ -50,16 +50,16 @@ export function Blog() {
             <button
               onClick={prev}
               disabled={!canPrev}
-              className="p-2 rounded-full hover:bg-white transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              className="p-2 rounded-full hover:bg-card transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              <ChevronLeft size={20} className="text-[#1a5c38]" />
+              <ChevronLeft size={20} className="text-primary" />
             </button>
             <button
               onClick={next}
               disabled={!canNext}
-              className="p-2 rounded-full hover:bg-white transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              className="p-2 rounded-full hover:bg-card transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              <ChevronRight size={20} className="text-[#1a5c38]" />
+              <ChevronRight size={20} className="text-primary" />
             </button>
           </div>
         </div>
@@ -85,7 +85,7 @@ export function Blog() {
               <div
                 key={post.id}
                 onClick={() => navigate(`/blog/${post.id}`)}
-                className="flex-shrink-0 w-80 bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow group cursor-pointer flex flex-col h-full snap-center"
+                className="flex-shrink-0 w-80 bg-card rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow group cursor-pointer flex flex-col h-full snap-center"
               >
                 <div className="h-32 overflow-hidden">
                   <img
@@ -111,7 +111,7 @@ export function Blog() {
                   </div>
 
                   <h3
-                    className="text-gray-900 mb-2 flex-1"
+                    className="text-foreground mb-2 flex-1"
                     style={{
                       fontFamily: "'Outfit', sans-serif",
                       fontWeight: 700,
@@ -121,7 +121,7 @@ export function Blog() {
                     {post.title}
                   </h3>
 
-                  <div className="flex flex-col gap-2 text-gray-500 text-xs">
+                  <div className="flex flex-col gap-2 text-muted-foreground text-xs">
                     <p
                       style={{
                         fontFamily: "'Inter', sans-serif",
@@ -130,7 +130,7 @@ export function Blog() {
                       {post.date}
                     </p>
                     <div
-                      className="flex items-center gap-2 text-gray-400"
+                      className="flex items-center gap-2 text-muted-foreground"
                       style={{ fontFamily: "'Inter', sans-serif" }}
                     >
                       <Clock size={12} />

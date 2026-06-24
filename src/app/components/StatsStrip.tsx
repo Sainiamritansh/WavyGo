@@ -2,7 +2,7 @@ import { STATS } from "../../data";
 
 export function StatsStrip() {
   return (
-    <div className="bg-[#1a5c38] py-8">
+    <div className="bg-primary py-8">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-0 md:divide-x md:divide-white/20">
           {STATS.map(({ icon: Icon, value, label }) => (
