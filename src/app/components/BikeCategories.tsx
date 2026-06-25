@@ -8,7 +8,7 @@ export function BikeCategories() {
   const navigate = useNavigate();
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* ── HEADER ───────────────────────────── */}
@@ -26,7 +26,7 @@ export function BikeCategories() {
             </p>
 
             <h2
-              className="text-[#111827]"
+              className="text-foreground"
               style={{
                 fontFamily: "'Outfit', sans-serif",
                 fontWeight: 800,
@@ -37,7 +37,7 @@ export function BikeCategories() {
             </h2>
 
             <p
-              className="text-gray-500 mt-2 max-w-lg"
+              className="text-muted-foreground mt-2 max-w-lg"
               style={{
                 fontFamily: "'Inter', sans-serif",
                 fontSize: "0.95rem",
@@ -49,7 +49,7 @@ export function BikeCategories() {
 
           <button
             onClick={() => navigate("/bikes")}
-            className="hidden md:flex items-center gap-2 text-[#1a5c38] border border-[#1a5c38] px-5 py-2.5 rounded-full hover:bg-[#1a5c38] hover:text-white transition-all text-sm"
+            className="hidden md:flex items-center gap-2 text-primary border border-primary px-5 py-2.5 rounded-full hover:bg-primary hover:text-primary-foreground transition-all text-sm"
             style={{
               fontFamily: "'Inter', sans-serif",
               fontWeight: 500,
@@ -74,7 +74,7 @@ export function BikeCategories() {
               {/* TAG */}
               <div className="absolute top-3 left-3 z-10">
                 <span
-                  className="bg-white/90 backdrop-blur-sm text-[#1a5c38] px-2.5 py-1 rounded-full"
+                  className="bg-white/90 backdrop-blur-sm text-primary px-2.5 py-1 rounded-full"
                   style={{
                     fontFamily: "'Inter', sans-serif",
                     fontWeight: 600,
@@ -98,7 +98,7 @@ export function BikeCategories() {
                 <div className="flex items-start justify-between">
                   <div>
                     <h3
-                      className="text-gray-900"
+                      className="text-foreground"
                       style={{
                         fontFamily: "'Outfit', sans-serif",
                         fontWeight: 700,
@@ -109,7 +109,7 @@ export function BikeCategories() {
                     </h3>
 
                     <p
-                      className="text-gray-500 text-xs mt-0.5"
+                      className="text-muted-foreground text-xs mt-0.5"
                       style={{
                         fontFamily: "'Inter', sans-serif",
                       }}
@@ -120,7 +120,7 @@ export function BikeCategories() {
 
                   <div className="text-right">
                     <p
-                      className="text-[#1a5c38]"
+                      className="text-primary"
                       style={{
                         fontFamily: "'Outfit', sans-serif",
                         fontWeight: 800,
@@ -130,7 +130,7 @@ export function BikeCategories() {
                       {cat.price}
                     </p>
                     <p
-                      className="text-gray-400 text-xs"
+                      className="text-muted-foreground text-xs"
                       style={{ fontFamily: "'Inter', sans-serif" }}
                     >
                       /day

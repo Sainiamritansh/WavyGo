@@ -10,13 +10,13 @@ const CategoryPage = () => {
       : [];
 
   return (
-    <div className="p-6 bg-gray-50 min-h-screen">
+    <div className="p-6 bg-background min-h-screen">
       {categoryVehicles.length === 0 ? (
         <div className="text-center py-10">
           <h2 className="text-2xl font-bold">
             No vehicles available
           </h2>
-          <p className="text-gray-500 mt-2">
+          <p className="text-muted-foreground mt-2">
             Check your category name and data.
           </p>
         </div>
@@ -30,7 +30,7 @@ const CategoryPage = () => {
             {categoryVehicles.map((vehicle) => (
               <div
                 key={vehicle.id}
-                className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300"
+                className="bg-card rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300"
               >
                 <img
                   src={vehicle.image}
@@ -43,11 +43,11 @@ const CategoryPage = () => {
                     {vehicle.name}
                   </h2>
 
-                  <p className="text-gray-600 text-sm mt-1">
+                  <p className="text-muted-foreground text-sm mt-1">
                     Vendor: {vehicle.vendor}
                   </p>
 
-                  <p className="text-gray-600 text-sm">
+                  <p className="text-muted-foreground text-sm">
                     📍 {vehicle.location}
                   </p>
 
@@ -56,12 +56,12 @@ const CategoryPage = () => {
                       ⭐ {vehicle.rating}
                     </span>
 
-                    <span className="text-green-600 font-bold">
+                    <span className="text-primary font-bold">
                       ₹{vehicle.price}/day
                     </span>
                   </div>
 
-                  <button className="w-full mt-4 bg-green-600 hover:bg-green-700 text-white py-2 rounded-lg font-medium transition">
+                  <button className="w-full mt-4 bg-primary hover:bg-primary/85 text-primary-foreground py-2 rounded-lg font-medium transition">
                     Book Now
                   </button>
                 </div>

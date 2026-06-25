@@ -1,0 +1,209 @@
+/* ═══════════════════════════════════════════════════════════════
+   OtpVerification.css — Standalone OTP component styles
+   Uses the WavyGo design system: #1a5c38 green, #f4f8f5 bg, 
+   Inter font, 10px border-radius for inputs, 999px for pills.
+   ═══════════════════════════════════════════════════════════════ */
+
+.otp-verification {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+    width: 100%;
+    font-family: 'Inter', sans-serif;
+}
+
+.otp-verification__title {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 800;
+    font-size: 24px;
+    color: var(--foreground);
+    margin: 0 0 2px;
+}
+
+.otp-verification__subtitle {
+    font-size: 13px;
+    color: var(--muted-foreground);
+    margin: 0;
+}
+
+.otp-verification__identifier {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 2px;
+}
+
+/* ── 6-digit input boxes ── */
+.otp-verification__boxes {
+    display: flex;
+    gap: 8px;
+    margin: 10px 0;
+    justify-content: center;
+}
+
+.otp-verification__box {
+    width: 44px;
+    height: 50px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    color: var(--foreground);
+    background: var(--muted);
+    border: 2px solid transparent;
+    border-radius: 10px;
+    padding: 0;
+    margin: 0;
+    transition: border-color 200ms ease, background 200ms ease;
+    box-sizing: border-box;
+}
+
+.otp-verification__box:focus {
+    outline: none;
+    border-color: var(--primary);
+    background: var(--card);
+}
+
+/* Red flash on incorrect OTP */
+.otp-verification__box--error {
+    border-color: #d32f2f !important;
+    background: #fff5f5 !important;
+    animation: otp-shake 300ms ease;
+}
+
+/* Green border on success */
+.otp-verification__box--success {
+    border-color: var(--primary) !important;
+    background: #f0faf3 !important;
+}
+
+@keyframes otp-shake {
+    0%, 100% { transform: translateX(0); }
+    20% { transform: translateX(-4px); }
+    40% { transform: translateX(4px); }
+    60% { transform: translateX(-3px); }
+    80% { transform: translateX(3px); }
+}
+
+/* ── Messages ── */
+.otp-verification__error {
+    font-size: 12px;
+    color: #d32f2f;
+    margin: 0;
+    padding: 0;
+    line-height: 1.4;
+}
+
+.otp-verification__success {
+    font-size: 13px;
+    color: var(--primary);
+    font-weight: 600;
+    margin: 4px 0;
+    padding: 0;
+    line-height: 1.4;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.otp-verification__checkmark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+/* ── Verify button ── */
+.otp-verification__btn {
+    border-radius: 999px;
+    border: 1px solid var(--primary);
+    background: var(--primary);
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 12px 45px;
+    letter-spacing: .2px;
+    cursor: pointer;
+    transition: transform 80ms ease-in, background 150ms ease, opacity 150ms ease;
+    margin-top: 4px;
+}
+
+.otp-verification__btn:hover {
+    background: #0f3d21;
+    border-color: #0f3d21;
+}
+
+.otp-verification__btn:active {
+    transform: scale(.95);
+}
+
+.otp-verification__btn:focus {
+    outline: none;
+}
+
+.otp-verification__btn:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+/* ── Resend row ── */
+.otp-verification__resend {
+    margin-top: 6px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.otp-verification__resend-text {
+    font-size: 13px;
+    color: var(--muted-foreground);
+}
+
+.otp-verification__resend-text strong {
+    color: var(--primary);
+}
+
+.otp-verification__resend-link {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--primary);
+    text-decoration: none;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.otp-verification__resend-link:hover {
+    text-decoration: underline;
+    color: #0f3d21;
+}
+
+/* ── Back link ── */
+.otp-verification__back {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--muted-foreground);
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 4px;
+    background: none;
+    border: none;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.otp-verification__back:hover {
+    color: var(--primary);
+}

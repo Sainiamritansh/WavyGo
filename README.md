@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🏍️ WavyGo
+#  WavyGo
 
 **India's Bike & Scooter Rental Marketplace — Frontend Web Application**
 
@@ -13,7 +13,7 @@
 
 A production-ready, single-page marketing website for **WavyGo** — a platform connecting riders with self-drive bikes and scooters across Uttarakhand, Himachal Pradesh, and beyond. Originally exported from Figma Make and progressively refactored into a clean, data-driven, type-safe React application.
 
-[📐 View Figma Design](https://www.figma.com/design/f13GAW0wP04Ju0Y2CKsEh6/Wavygo-website) · [📦 Repository](https://github.com/Abhay-Chand/Wavygo)
+[View Figma Design](https://www.figma.com/design/f13GAW0wP04Ju0Y2CKsEh6/Wavygo-website) · [Repository](https://github.com/Abhay-Chand/Wavygo)
 
 </div>
 
@@ -62,17 +62,14 @@ The codebase was initially exported from **Figma Make** (Figma's design-to-code 
 ---
 
 ## Screenshots
-
-> Replace these placeholders with actual screenshots once added to the repository.
-
 | Section | Preview |
 |---|---|
-| Hero + Booking Form | ![Hero](https://placehold.co/900x500/1a3b2e/ffffff?text=Hero+%E2%80%94+Your+Next+Adventure+Starts+Here) |
-| Browse by Bike Type | ![Browse](https://placehold.co/900x500/f5f5f0/1a3b2e?text=Browse+by+Type+%E2%80%94+Scooter+%2F+Commuter+%2F+Adventure) |
-| Destination Discovery | ![Destinations](https://placehold.co/900x500/f0f5f0/1a3b2e?text=Discover+Nearby+Destinations) |
-| App Showcase | ![App](https://placehold.co/900x500/1a3b2e/e8a12d?text=The+WavyGo+App+%E2%80%94+Every+Ride+in+Your+Pocket) |
-| Host Section | ![Host](https://placehold.co/900x500/f5f5f0/1a3b2e?text=Turn+Your+Parked+Bike+Into+Passive+Income) |
-| Testimonials + FAQ | ![Reviews](https://placehold.co/900x500/f5f5f0/1a3b2e?text=Why+Riders+Choose+WavyGo) |
+| Hero + Booking Form | ![Hero](/assets/home-page.png) |
+| Browse by Bike Type | ![Browse](/assets/bike-type.png) |
+| Destination Discovery | ![Destinations](/assets/Destination.png) |
+| App Showcase | ![App](/assets/App.png) |
+| Host Section | ![Host](/assets/Busniess-Vendor.png) |
+| Testimonials + FAQ | ![Reviews](/assets/Reviews.png) |
 
 ---
 
@@ -82,17 +79,17 @@ WavyGo is a **single-page React application** — all content lives on one scrol
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│  Presentation Layer  →  /src/components/  (17 components)  │
-│         Pure UI rendering. No hardcoded content.           │
+│  Presentation Layer  →  /src/components/  (17 components)   │
+│         Pure UI rendering. No hardcoded content.            │
 ├─────────────────────────────────────────────────────────────┤
-│  Data Layer          →  /src/data/        (9 typed files)  │
-│         Single source of truth for all site content.       │
+│  Data Layer          →  /src/data/        (9 typed files)   │
+│         Single source of truth for all site content.        │
 ├─────────────────────────────────────────────────────────────┤
-│  Type Layer          →  /src/types/       (1 index file)   │
-│         TypeScript interfaces for every data shape.        │
+│  Type Layer          →  /src/types/       (1 index file)    │
+│         TypeScript interfaces for every data shape.         │
 ├─────────────────────────────────────────────────────────────┤
-│  Config Layer        →  /src/config/      (theme tokens)   │
-│         Colors, typography, spacing, radii, shadows.       │
+│  Config Layer        →  /src/config/      (theme tokens)    │
+│         Colors, typography, spacing, radii, shadows.        │
 └─────────────────────────────────────────────────────────────┘
                             ↑
           /src/utils/hooks/useCarousel.ts
@@ -255,12 +252,11 @@ Wavygo/
 │   │   └── components/
 │   │       ├── figma/
 │   │       │   └── ImageWithFallback.tsx   # Figma Make image helper (review in Phase 3)
-│   │       └── ui/                    # ⚠️ 46 shadcn/Radix UI components — MOSTLY UNUSED
-│   │           ├── input.tsx          # ✅ KEEP — used in Hero booking form
-│   │           ├── label.tsx          # ✅ KEEP — used in Hero booking form
-│   │           ├── utils.ts           # ✅ KEEP — cn() utility
-│   │           ├── use-mobile.ts      # ✅ KEEP — responsive hook
-│   │           └── [42 others]        # ❌ DELETE in Phase 3
+│   │       └── ui/                    #  46 shadcn/Radix UI components — MOSTLY UNUSED
+│   │           ├── input.tsx          #  KEEP — used in Hero booking form
+│   │           ├── label.tsx          #  KEEP — used in Hero booking form
+│   │           ├── utils.ts           #  KEEP — cn() utility
+│   │           ├── use-mobile.ts      #  KEEP — responsive hook
 │   │
 │   ├── App.tsx                        # Root component — composes all 17 sections
 │   └── main.tsx                       # React DOM entry point
