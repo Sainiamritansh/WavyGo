@@ -2,6 +2,13 @@ import { useState } from "react";
 import { MapPin, Calendar, Search, Star, Shield, Zap, ChevronRight } from "lucide-react";
 import { LOCATIONS, HERO_TRUST_CARDS } from "../../data";
 
+const formatDisplayDate = (val: string) => {
+  if (!val) return "";
+  const d = new Date(val);
+  const pad = (n: number) => String(n).padStart(2, "0");
+  return `${pad(d.getDate())}-${pad(d.getMonth() + 1)}-${d.getFullYear()} ${pad(d.getHours())}:${pad(d.getMinutes())}`;
+};
+
 export function Hero() {
   const [location, setLocation] = useState("");
   const [pickupDate, setPickupDate] = useState("");
@@ -96,25 +103,44 @@ export function Hero() {
 
               {/* Dates */}
               <div className="grid grid-cols-2 gap-3 mb-4">
-                <div className="relative">
-                  <Calendar size={15} className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" />
+                {/* Pickup date */}
+                <div className="relative" style={{ minWidth: 0 }}>
+                  <Calendar size={15} className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground pointer-events-none z-[1]" />
                   <input
                     type="datetime-local"
                     value={pickupDate}
                     onChange={(e) => setPickupDate(e.target.value)}
-                    className="w-full pl-9 pr-3 py-3 bg-muted border border-border rounded-xl text-sm text-foreground focus:outline-none focus:border-primary transition-colors"
-                    style={{ fontFamily: "'Inter', sans-serif" }}
+                    className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-[2]"
+                    style={{ colorScheme: "light" }}
                   />
+                  <div className="w-full pl-9 pr-2 py-3 bg-muted border border-border rounded-xl text-foreground pointer-events-none overflow-hidden whitespace-nowrap">
+                    <span
+                      className={pickupDate ? "text-foreground" : "text-muted-foreground"}
+                      style={{ fontFamily: "'Inter', sans-serif", fontSize: "13px" }}
+                    >
+                      {pickupDate ? formatDisplayDate(pickupDate) : "dd-mm-yyyy --:-- --"}
+                    </span>
+                  </div>
                 </div>
-                <div className="relative">
-                  <Calendar size={15} className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" />
+
+                {/* Return date */}
+                <div className="relative" style={{ minWidth: 0 }}>
+                  <Calendar size={15} className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground pointer-events-none z-[1]" />
                   <input
                     type="datetime-local"
                     value={returnDate}
                     onChange={(e) => setReturnDate(e.target.value)}
-                    className="w-full pl-9 pr-3 py-3 bg-muted border border-border rounded-xl text-sm text-foreground focus:outline-none focus:border-primary transition-colors"
-                    style={{ fontFamily: "'Inter', sans-serif" }}
+                    className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-[2]"
+                    style={{ colorScheme: "light" }}
                   />
+                  <div className="w-full pl-9 pr-2 py-3 bg-muted border border-border rounded-xl text-foreground pointer-events-none overflow-hidden whitespace-nowrap">
+                    <span
+                      className={returnDate ? "text-foreground" : "text-muted-foreground"}
+                      style={{ fontFamily: "'Inter', sans-serif", fontSize: "13px" }}
+                    >
+                      {returnDate ? formatDisplayDate(returnDate) : "dd-mm-yyyy --:-- --"}
+                    </span>
+                  </div>
                 </div>
               </div>
 
