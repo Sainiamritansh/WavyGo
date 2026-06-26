@@ -68,3 +68,31 @@ html.no-transition * {
     animation: none;
   }
 }
+
+/* ── Mobile datetime-local input fixes ─────────────────── */
+/* Ensure the native date/time text is visible on mobile browsers */
+input[type="datetime-local"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  min-height: 48px;
+}
+
+/* Style the webkit inner parts so text doesn't get clipped */
+input[type="datetime-local"]::-webkit-datetime-edit {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+input[type="datetime-local"]::-webkit-datetime-edit-fields-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+/* Make the calendar picker icon match the theme */
+input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
