@@ -86,13 +86,13 @@ export function BikeCategories() {
               </div>
 
               {/* IMAGE */}
-              <div className="h-64 overflow-hidden rounded-2xl">
-                <img
-                  src={cat.img}
-                  alt={cat.name}
-                  className="w-full h-full object-cover"
-                />
-              </div>
+             <div className="h-48 sm:h-56 md:h-64 overflow-hidden rounded-2xl flex items-center justify-center">
+               <img
+                 src={cat.img}
+                 alt={cat.name}
+                 className="w-full h-full object-contain md:object-cover transition-transform duration-300 group-hover:scale-105"
+               />
+             </div>
               {/* INFO */}
               <div className="p-4">
                 <div className="flex items-start justify-between">
